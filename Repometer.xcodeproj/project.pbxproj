@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */; };
+		4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */; };
+		4C1BA9C727BC4A5E004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
+		4C1BA9CA27BC4A5E004C3AEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C927BC4A5E004C3AEC /* Preview Assets.xcassets */; };
+		4C1BA9D427BC4A5F004C3AEC /* RepometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9D327BC4A5F004C3AEC /* RepometerTests.swift */; };
+		4C1BA9DE27BC4A5F004C3AEC /* RepometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9DD27BC4A5F004C3AEC /* RepometerUITests.swift */; };
+		4C1BA9E027BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9DF27BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift */; };
+		4C1BA9E427BC4A5F004C3AEC /* Repometer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C1BA9E927BC4A60004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9E827BC4A60004C3AEC /* Assets.xcassets */; };
+		4C1BA9EF27BC4A60004C3AEC /* Repometer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */; };
+		4C1BA9F627BC4A60004C3AEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F527BC4A60004C3AEC /* ContentView.swift */; };
+		4C1BA9F827BC4A60004C3AEC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F727BC4A60004C3AEC /* NotificationController.swift */; };
+		4C1BA9FA27BC4A60004C3AEC /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F927BC4A60004C3AEC /* NotificationView.swift */; };
+		4C1BA9FC27BC4A60004C3AEC /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9FB27BC4A60004C3AEC /* ComplicationController.swift */; };
+		4C1BA9FE27BC4A62004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */; };
+		4C1BAA0127BC4A62004C3AEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0027BC4A62004C3AEC /* Preview Assets.xcassets */; };
+		4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */; };
+		4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */; };
+		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C1BA9D027BC4A5F004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9BE27BC4A5A004C3AEC;
+			remoteInfo = Repometer;
+		};
+		4C1BA9DA27BC4A5F004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9BE27BC4A5A004C3AEC;
+			remoteInfo = Repometer;
+		};
+		4C1BA9E527BC4A5F004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9E227BC4A5F004C3AEC;
+			remoteInfo = "Repometer WatchKit App";
+		};
+		4C1BA9F027BC4A60004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9ED27BC4A60004C3AEC;
+			remoteInfo = "Repometer WatchKit Extension";
+		};
+		4C1BAA0927BC4A62004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9ED27BC4A60004C3AEC;
+			remoteInfo = "Repometer WatchKit Extension";
+		};
+		4C1BAA1327BC4A62004C3AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BA9E227BC4A5F004C3AEC;
+			remoteInfo = "Repometer WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C1BAA1F27BC4A62004C3AEC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C1BA9EF27BC4A60004C3AEC /* Repometer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA2327BC4A62004C3AEC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4C1BA9E427BC4A5F004C3AEC /* Repometer WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
+		4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1BA9C927BC4A5E004C3AEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C1BA9CF27BC4A5F004C3AEC /* RepometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9D327BC4A5F004C3AEC /* RepometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerTests.swift; sourceTree = "<group>"; };
+		4C1BA9D927BC4A5F004C3AEC /* RepometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9DD27BC4A5F004C3AEC /* RepometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerUITests.swift; sourceTree = "<group>"; };
+		4C1BA9DF27BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repometer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9E827BC4A60004C3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Repometer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
+		4C1BA9F527BC4A60004C3AEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C1BA9F727BC4A60004C3AEC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4C1BA9F927BC4A60004C3AEC /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4C1BA9FB27BC4A60004C3AEC /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1BAA0027BC4A62004C3AEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C1BAA0227BC4A62004C3AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1BAA0327BC4A62004C3AEC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4C1BAA0827BC4A62004C3AEC /* Repometer WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repometer WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repometer WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C1BA9BC27BC4A5A004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9CC27BC4A5F004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9D627BC4A5F004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9EB27BC4A60004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA0527BC4A62004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA0F27BC4A62004C3AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C1BA9B627BC4A59004C3AEC = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9C127BC4A5A004C3AEC /* Repometer */,
+				4C1BA9D227BC4A5F004C3AEC /* RepometerTests */,
+				4C1BA9DC27BC4A5F004C3AEC /* RepometerUITests */,
+				4C1BA9E727BC4A5F004C3AEC /* Repometer WatchKit App */,
+				4C1BA9F227BC4A60004C3AEC /* Repometer WatchKit Extension */,
+				4C1BAA0B27BC4A62004C3AEC /* Repometer WatchKit AppTests */,
+				4C1BAA1527BC4A62004C3AEC /* Repometer WatchKit AppUITests */,
+				4C1BA9C027BC4A5A004C3AEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C1BA9C027BC4A5A004C3AEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */,
+				4C1BA9CF27BC4A5F004C3AEC /* RepometerTests.xctest */,
+				4C1BA9D927BC4A5F004C3AEC /* RepometerUITests.xctest */,
+				4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */,
+				4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */,
+				4C1BAA0827BC4A62004C3AEC /* Repometer WatchKit AppTests.xctest */,
+				4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C1BA9C127BC4A5A004C3AEC /* Repometer */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */,
+				4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */,
+				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
+				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
+			);
+			path = Repometer;
+			sourceTree = "<group>";
+		};
+		4C1BA9C827BC4A5E004C3AEC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9C927BC4A5E004C3AEC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C1BA9D227BC4A5F004C3AEC /* RepometerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9D327BC4A5F004C3AEC /* RepometerTests.swift */,
+			);
+			path = RepometerTests;
+			sourceTree = "<group>";
+		};
+		4C1BA9DC27BC4A5F004C3AEC /* RepometerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9DD27BC4A5F004C3AEC /* RepometerUITests.swift */,
+				4C1BA9DF27BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift */,
+			);
+			path = RepometerUITests;
+			sourceTree = "<group>";
+		};
+		4C1BA9E727BC4A5F004C3AEC /* Repometer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9E827BC4A60004C3AEC /* Assets.xcassets */,
+			);
+			path = "Repometer WatchKit App";
+			sourceTree = "<group>";
+		};
+		4C1BA9F227BC4A60004C3AEC /* Repometer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */,
+				4C1BA9F527BC4A60004C3AEC /* ContentView.swift */,
+				4C1BA9F727BC4A60004C3AEC /* NotificationController.swift */,
+				4C1BA9F927BC4A60004C3AEC /* NotificationView.swift */,
+				4C1BA9FB27BC4A60004C3AEC /* ComplicationController.swift */,
+				4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */,
+				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
+				4C1BAA0327BC4A62004C3AEC /* PushNotificationPayload.apns */,
+				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
+			);
+			path = "Repometer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4C1BA9FF27BC4A62004C3AEC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BAA0027BC4A62004C3AEC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C1BAA0B27BC4A62004C3AEC /* Repometer WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */,
+			);
+			path = "Repometer WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		4C1BAA1527BC4A62004C3AEC /* Repometer WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */,
+				4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */,
+			);
+			path = "Repometer WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C1BA9BE27BC4A5A004C3AEC /* Repometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA2427BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer" */;
+			buildPhases = (
+				4C1BA9BB27BC4A5A004C3AEC /* Sources */,
+				4C1BA9BC27BC4A5A004C3AEC /* Frameworks */,
+				4C1BA9BD27BC4A5A004C3AEC /* Resources */,
+				4C1BAA2327BC4A62004C3AEC /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BA9E627BC4A5F004C3AEC /* PBXTargetDependency */,
+			);
+			name = Repometer;
+			productName = Repometer;
+			productReference = 4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C1BA9CE27BC4A5F004C3AEC /* RepometerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA2727BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "RepometerTests" */;
+			buildPhases = (
+				4C1BA9CB27BC4A5F004C3AEC /* Sources */,
+				4C1BA9CC27BC4A5F004C3AEC /* Frameworks */,
+				4C1BA9CD27BC4A5F004C3AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BA9D127BC4A5F004C3AEC /* PBXTargetDependency */,
+			);
+			name = RepometerTests;
+			productName = RepometerTests;
+			productReference = 4C1BA9CF27BC4A5F004C3AEC /* RepometerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C1BA9D827BC4A5F004C3AEC /* RepometerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA2A27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "RepometerUITests" */;
+			buildPhases = (
+				4C1BA9D527BC4A5F004C3AEC /* Sources */,
+				4C1BA9D627BC4A5F004C3AEC /* Frameworks */,
+				4C1BA9D727BC4A5F004C3AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BA9DB27BC4A5F004C3AEC /* PBXTargetDependency */,
+			);
+			name = RepometerUITests;
+			productName = RepometerUITests;
+			productReference = 4C1BA9D927BC4A5F004C3AEC /* RepometerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4C1BA9E227BC4A5F004C3AEC /* Repometer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA2027BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit App" */;
+			buildPhases = (
+				4C1BA9E127BC4A5F004C3AEC /* Resources */,
+				4C1BAA1F27BC4A62004C3AEC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BA9F127BC4A60004C3AEC /* PBXTargetDependency */,
+			);
+			name = "Repometer WatchKit App";
+			productName = "Repometer WatchKit App";
+			productReference = 4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4C1BA9ED27BC4A60004C3AEC /* Repometer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA1C27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit Extension" */;
+			buildPhases = (
+				4C1BA9EA27BC4A60004C3AEC /* Sources */,
+				4C1BA9EB27BC4A60004C3AEC /* Frameworks */,
+				4C1BA9EC27BC4A60004C3AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Repometer WatchKit Extension";
+			productName = "Repometer WatchKit Extension";
+			productReference = 4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		4C1BAA0727BC4A62004C3AEC /* Repometer WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA2D27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit AppTests" */;
+			buildPhases = (
+				4C1BAA0427BC4A62004C3AEC /* Sources */,
+				4C1BAA0527BC4A62004C3AEC /* Frameworks */,
+				4C1BAA0627BC4A62004C3AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BAA0A27BC4A62004C3AEC /* PBXTargetDependency */,
+			);
+			name = "Repometer WatchKit AppTests";
+			productName = "Repometer WatchKit AppTests";
+			productReference = 4C1BAA0827BC4A62004C3AEC /* Repometer WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C1BAA1127BC4A62004C3AEC /* Repometer WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1BAA3027BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit AppUITests" */;
+			buildPhases = (
+				4C1BAA0E27BC4A62004C3AEC /* Sources */,
+				4C1BAA0F27BC4A62004C3AEC /* Frameworks */,
+				4C1BAA1027BC4A62004C3AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1BAA1427BC4A62004C3AEC /* PBXTargetDependency */,
+			);
+			name = "Repometer WatchKit AppUITests";
+			productName = "Repometer WatchKit AppUITests";
+			productReference = 4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C1BA9B727BC4A59004C3AEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4C1BA9BE27BC4A5A004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4C1BA9CE27BC4A5F004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4C1BA9BE27BC4A5A004C3AEC;
+					};
+					4C1BA9D827BC4A5F004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4C1BA9BE27BC4A5A004C3AEC;
+					};
+					4C1BA9E227BC4A5F004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4C1BA9ED27BC4A60004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4C1BAA0727BC4A62004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4C1BA9ED27BC4A60004C3AEC;
+					};
+					4C1BAA1127BC4A62004C3AEC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4C1BA9E227BC4A5F004C3AEC;
+					};
+				};
+			};
+			buildConfigurationList = 4C1BA9BA27BC4A59004C3AEC /* Build configuration list for PBXProject "Repometer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C1BA9B627BC4A59004C3AEC;
+			productRefGroup = 4C1BA9C027BC4A5A004C3AEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C1BA9BE27BC4A5A004C3AEC /* Repometer */,
+				4C1BA9CE27BC4A5F004C3AEC /* RepometerTests */,
+				4C1BA9D827BC4A5F004C3AEC /* RepometerUITests */,
+				4C1BA9E227BC4A5F004C3AEC /* Repometer WatchKit App */,
+				4C1BA9ED27BC4A60004C3AEC /* Repometer WatchKit Extension */,
+				4C1BAA0727BC4A62004C3AEC /* Repometer WatchKit AppTests */,
+				4C1BAA1127BC4A62004C3AEC /* Repometer WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C1BA9BD27BC4A5A004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9CA27BC4A5E004C3AEC /* Preview Assets.xcassets in Resources */,
+				4C1BA9C727BC4A5E004C3AEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9CD27BC4A5F004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9D727BC4A5F004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9E127BC4A5F004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9E927BC4A60004C3AEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9EC27BC4A60004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BAA0127BC4A62004C3AEC /* Preview Assets.xcassets in Resources */,
+				4C1BA9FE27BC4A62004C3AEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA0627BC4A62004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA1027BC4A62004C3AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C1BA9BB27BC4A5A004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */,
+				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9CB27BC4A5F004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9D427BC4A5F004C3AEC /* RepometerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9D527BC4A5F004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9E027BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift in Sources */,
+				4C1BA9DE27BC4A5F004C3AEC /* RepometerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BA9EA27BC4A60004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BA9F827BC4A60004C3AEC /* NotificationController.swift in Sources */,
+				4C1BA9F627BC4A60004C3AEC /* ContentView.swift in Sources */,
+				4C1BA9FC27BC4A60004C3AEC /* ComplicationController.swift in Sources */,
+				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
+				4C1BA9FA27BC4A60004C3AEC /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA0427BC4A62004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1BAA0E27BC4A62004C3AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */,
+				4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C1BA9D127BC4A5F004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9BE27BC4A5A004C3AEC /* Repometer */;
+			targetProxy = 4C1BA9D027BC4A5F004C3AEC /* PBXContainerItemProxy */;
+		};
+		4C1BA9DB27BC4A5F004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9BE27BC4A5A004C3AEC /* Repometer */;
+			targetProxy = 4C1BA9DA27BC4A5F004C3AEC /* PBXContainerItemProxy */;
+		};
+		4C1BA9E627BC4A5F004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9E227BC4A5F004C3AEC /* Repometer WatchKit App */;
+			targetProxy = 4C1BA9E527BC4A5F004C3AEC /* PBXContainerItemProxy */;
+		};
+		4C1BA9F127BC4A60004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9ED27BC4A60004C3AEC /* Repometer WatchKit Extension */;
+			targetProxy = 4C1BA9F027BC4A60004C3AEC /* PBXContainerItemProxy */;
+		};
+		4C1BAA0A27BC4A62004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9ED27BC4A60004C3AEC /* Repometer WatchKit Extension */;
+			targetProxy = 4C1BAA0927BC4A62004C3AEC /* PBXContainerItemProxy */;
+		};
+		4C1BAA1427BC4A62004C3AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1BA9E227BC4A5F004C3AEC /* Repometer WatchKit App */;
+			targetProxy = 4C1BAA1327BC4A62004C3AEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C1BAA1A27BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C1BAA1B27BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4C1BAA1D27BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Repometer WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4C1BAA1E27BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Repometer WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		4C1BAA2127BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Repometer_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.samperlmutter.Repometer;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4C1BAA2227BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Repometer_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.samperlmutter.Repometer;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		4C1BAA2527BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Repometer/Preview Content\"";
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C1BAA2627BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Repometer/Preview Content\"";
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1BAA2827BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer.app/Repometer";
+			};
+			name = Debug;
+		};
+		4C1BAA2927BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer.app/Repometer";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1BAA2B27BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Repometer;
+			};
+			name = Debug;
+		};
+		4C1BAA2C27BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Repometer;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1BAA2E27BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.samperlmutter.Repometer-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer WatchKit Extension.appex/Repometer WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4C1BAA2F27BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.samperlmutter.Repometer-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer WatchKit Extension.appex/Repometer WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		4C1BAA3127BC4A62004C3AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.samperlmutter.Repometer-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Repometer WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4C1BAA3227BC4A62004C3AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT2V2847N6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.samperlmutter.Repometer-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Repometer WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C1BA9BA27BC4A59004C3AEC /* Build configuration list for PBXProject "Repometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA1A27BC4A62004C3AEC /* Debug */,
+				4C1BAA1B27BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA1C27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA1D27BC4A62004C3AEC /* Debug */,
+				4C1BAA1E27BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA2027BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA2127BC4A62004C3AEC /* Debug */,
+				4C1BAA2227BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA2427BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA2527BC4A62004C3AEC /* Debug */,
+				4C1BAA2627BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA2727BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "RepometerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA2827BC4A62004C3AEC /* Debug */,
+				4C1BAA2927BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA2A27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "RepometerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA2B27BC4A62004C3AEC /* Debug */,
+				4C1BAA2C27BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA2D27BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA2E27BC4A62004C3AEC /* Debug */,
+				4C1BAA2F27BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1BAA3027BC4A62004C3AEC /* Build configuration list for PBXNativeTarget "Repometer WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1BAA3127BC4A62004C3AEC /* Debug */,
+				4C1BAA3227BC4A62004C3AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C1BA9B727BC4A59004C3AEC /* Project object */;
+}
