@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Button("Buzz", action: {
+            WKInterfaceDevice.current().play(WKHapticType.click)
+        })
             .padding()
     }
 }
