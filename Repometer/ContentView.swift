@@ -13,6 +13,7 @@ struct WorkoutItem: Identifiable {
 }
 
 struct ContentView: View {
+    @State var showingCreateSheet = false
     var workouts = [
         WorkoutItem(name: "Plank"),
         WorkoutItem(name: "Leg lift"),
@@ -30,9 +31,14 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Spacer()
-                    NavigationLink(destination: CreateWorkoutView(), label: {
+                    Button(action: {
+                        showingCreateSheet.toggle()
+                    }, label: {
                         Image(systemName: "square.and.pencil")
                     })
+                        .sheet(isPresented: $showingCreateSheet, content: {
+                            CreateWorkoutView()
+                        })
                 }
             }
         }
