@@ -7,29 +7,30 @@
 
 import SwiftUI
 
+struct WorkoutItem: Identifiable {
+    let name: String
+    let id = UUID()
+}
+
 struct ContentView: View {
-    struct Workout: Identifiable {
-        let name: String
-        let id = UUID()
-    }
-    
     var workouts = [
-        Workout(name: "Plank"),
-        Workout(name: "Leg lift"),
-        Workout(name: "Bridge")
+        WorkoutItem(name: "Plank"),
+        WorkoutItem(name: "Leg lift"),
+        WorkoutItem(name: "Bridge")
     ]
     var body: some View {
         NavigationView {
-            List (workouts) {
-                Text($0.name)
+            List (workouts) { workoutItem in
+                NavigationLink(destination: WorkoutView(workoutItem: workoutItem)) {
+                    Text(workoutItem.name)
+                        .font(.headline)
+                }
             }
-            .navigationTitle("Workouts")
+            .navigationBarTitle("Workouts")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Spacer()
-                    Button(action: {
-                        
-                    }, label: {
+                    NavigationLink(destination: CreateWorkoutView(), label: {
                         Image(systemName: "square.and.pencil")
                     })
                 }

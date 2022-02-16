@@ -27,6 +27,8 @@
 		4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */; };
 		4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */; };
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
+		4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */; };
+		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repometer WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */,
 				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
 				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
+				4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */,
+				4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */,
 			);
 			path = Repometer;
 			sourceTree = "<group>";
@@ -539,7 +545,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */,
 				4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */,
+				4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */,
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
