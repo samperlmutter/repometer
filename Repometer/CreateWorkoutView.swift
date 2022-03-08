@@ -16,6 +16,7 @@ struct SaveButtonStyle: ButtonStyle {
         }
         .padding()
         .background(Color.blue.cornerRadius(8))
+        .padding()
         .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }
@@ -24,25 +25,44 @@ struct CreateWorkoutView: View {
     @Environment(\.dismiss) var dismiss
     @State var name: String = ""
     @State var description: String = ""
+    @State var holdTime: Int? = nil
+    @State var numReps: Int? = nil
+    @State var numSets: Int? = nil
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("INFO")) {
-                    TextField("Name", text: $name)
-                    ZStack {
-                        if description.isEmpty {
-                            HStack {
-                                Text("Description")
-                                    .opacity(description.isEmpty ? 0.25 : 1)
-                                Spacer()
-                            }
+            VStack {
+                Form {
+                    Section(header: Text("INFO")) {
+                        TextField("Name", text: $name)
+                        TextField("Description", text: $description)
+                    }
+                    Section(header: Text("ROUTINE")) {
+                        HStack {
+                            Text("Hold for")
+                            Spacer()
+                            TextField("", value: $holdTime, format: .number)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                            Text("sec")
                         }
-                        TextEditor(text: $description)
+                        HStack {
+                            Text("Number of reps")
+                            Spacer()
+                            TextField("", value: $numReps, format: .number)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                        }
+                        HStack {
+                            Text("Number of sets")
+                            Spacer()
+                            TextField("", value: $numSets, format: .number)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                        }
                     }
                 }
                 Button("Save") {
-                    
                 }
                 .buttonStyle(SaveButtonStyle())
             }
