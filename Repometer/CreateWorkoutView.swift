@@ -63,11 +63,36 @@ struct CreateWorkoutView: View {
                     }
                 }
                 Button("Save") {
+                    let workout = Workout(name: name,
+                            desc: description,
+                            holdTime: holdTime ?? 0,
+                            numReps: numReps ?? 0,
+                            numSets: numSets ?? 0)
+                    save(workout: workout)
+                    dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())
             }
             .navigationBarTitle("Create Workout", displayMode: .inline)
             
+        }
+    }
+
+    func save(workout: Workout) {
+        var workouts = [Workout]()
+        let defaults = UserDefaults.standard
+        if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
+            if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
+                workouts = decodedWorkouts
+            }
+        }
+        workouts.append(workout)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
+            defaults.set(savedData, forKey: "workouts")
+        }
+
+        for w in workouts {
+            print(w.name)
         }
     }
 }
