@@ -20,10 +20,18 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List (workouts) { workout in
-                NavigationLink(destination: WorkoutView(workout: workout)) {
-                    Text(workout.name)
-                            .font(.headline)
+            List {
+                ForEach(workouts) { workout in
+                    NavigationLink(destination: WorkoutView(workout: workout)) {
+                        Text(workout.name)
+                                .font(.headline)
+                    }
+                }
+                .onDelete { i in
+                    workouts.remove(atOffsets: i)
+                    if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
+                        UserDefaults.standard.set(savedData, forKey: "workouts")
+                    }
                 }
             }
             .onAppear {
