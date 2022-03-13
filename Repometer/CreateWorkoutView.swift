@@ -23,6 +23,7 @@ struct SaveButtonStyle: ButtonStyle {
 
 struct CreateWorkoutView: View {
     @Environment(\.dismiss) var dismiss
+    @Binding var workouts: [Workout]
     @State var name: String = ""
     @State var description: String = ""
     @State var holdTime: Int? = nil
@@ -79,26 +80,9 @@ struct CreateWorkoutView: View {
     }
 
     func save(workout: Workout) {
-        var workouts = [Workout]()
-        let defaults = UserDefaults.standard
-        if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
-            if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
-                workouts = decodedWorkouts
-            }
-        }
         workouts.append(workout)
         if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
-            defaults.set(savedData, forKey: "workouts")
+            UserDefaults.standard.set(savedData, forKey: "workouts")
         }
-
-        for w in workouts {
-            print(w.name)
-        }
-    }
-}
-
-struct CreateWorkoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateWorkoutView()
     }
 }

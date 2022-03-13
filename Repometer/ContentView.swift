@@ -14,18 +14,26 @@ struct WorkoutItem: Identifiable {
 
 struct ContentView: View {
     @State var showingCreateSheet = false
-    var workouts = [
-        WorkoutItem(name: "Plank"),
-        WorkoutItem(name: "Leg lift"),
-        WorkoutItem(name: "Bridge")
-    ]
+    @State var workouts = [Workout]()
+    @State var reachable = "No"
+    @State var messageText = ""
+
     var body: some View {
         NavigationView {
-            List (workouts) { workoutItem in
-                NavigationLink(destination: WorkoutView(workoutItem: workoutItem)) {
-                    Text(workoutItem.name)
-                        .font(.headline)
+            List (workouts) { workout in
+                NavigationLink(destination: WorkoutView(workout: workout)) {
+                    Text(workout.name)
+                            .font(.headline)
                 }
+            }
+            .onAppear {
+                let defaults = UserDefaults.standard
+                if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
+                    if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
+                        workouts = decodedWorkouts
+                    }
+                }
+            }
             }
             .navigationBarTitle("Workouts")
             .toolbar {
@@ -37,7 +45,7 @@ struct ContentView: View {
                         Image(systemName: "square.and.pencil")
                     })
                         .sheet(isPresented: $showingCreateSheet, content: {
-                            CreateWorkoutView()
+                            CreateWorkoutView(workouts: $workouts)
                         })
                 }
             }
