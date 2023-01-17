@@ -7,40 +7,28 @@
 
 import SwiftUI
 
-struct WorkoutItem: Identifiable {
-    let name: String
-    let id = UUID()
-}
-
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
     @State var showingCreateSheet = false
-    @State var workouts = [Workout]()
+    @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
 
     var body: some View {
         NavigationView {
             VStack {
                 List {
                     ForEach(workouts) { workout in
-                        NavigationLink(destination: WorkoutView(workout: workout)) {
-                            Text(workout.name)
+                        NavigationLink {
+                            WorkoutView(workout: workout)
+                        } label: {
+                            Text(workout.name ?? "Unknown")
                                     .font(.headline)
                         }
                     }
-                            .onDelete { i in
-                                workouts.remove(atOffsets: i)
-                                if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
-                                    UserDefaults.standard.set(savedData, forKey: "workouts")
-                                }
-                            }
+                    .onDelete { i in
+                        moc.delete(workouts[i.first!])
+                        try? moc.save()
+                    }
                 }
-                        .onAppear {
-                            let defaults = UserDefaults.standard
-                            if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
-                                if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
-                                    workouts = decodedWorkouts
-                                }
-                            }
-                        }
                 Button("Send message") {
                     WatchConnectivityManager.shared.send("Hello world!\n\(Date().ISO8601Format())")
                 }
@@ -55,7 +43,7 @@ struct ContentView: View {
                         Image(systemName: "square.and.pencil")
                     })
                         .sheet(isPresented: $showingCreateSheet, content: {
-                            CreateWorkoutView(workouts: $workouts)
+                            CreateWorkoutView()
                         })
                 }
             }

@@ -14,6 +14,6 @@ struct WorkoutView: View {
         VStack {
             
         }
-        .navigationBarTitle(workout.name, displayMode: .inline)
+        .navigationBarTitle(workout.name ?? "Unknown", displayMode: .inline)
     }
 }

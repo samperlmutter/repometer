@@ -22,13 +22,14 @@ struct SaveButtonStyle: ButtonStyle {
 }
 
 struct CreateWorkoutView: View {
+    @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
-    @Binding var workouts: [Workout]
+    @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     @State var name: String = ""
     @State var description: String = ""
-    @State var holdTime: Int? = nil
-    @State var numReps: Int? = nil
-    @State var numSets: Int? = nil
+    @State var holdTime: Int32? = nil
+    @State var numReps: Int32? = nil
+    @State var numSets: Int32? = nil
     
     var body: some View {
         NavigationView {
@@ -64,25 +65,20 @@ struct CreateWorkoutView: View {
                     }
                 }
                 Button("Save") {
-                    let workout = Workout(name: name,
-                            desc: description,
-                            holdTime: holdTime ?? 0,
-                            numReps: numReps ?? 0,
-                            numSets: numSets ?? 0)
-                    save(workout: workout)
+                    let workout = Workout(context: moc)
+                    workout.id = UUID()
+                    workout.name = name
+                    workout.desc = description
+                    workout.holdTime = holdTime ?? 0
+                    workout.numReps = numReps ?? 0
+                    workout.numSets = numSets ?? 0
+                    try? moc.save()
                     dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())
             }
             .navigationBarTitle("Create Workout", displayMode: .inline)
             
-        }
-    }
-
-    func save(workout: Workout) {
-        workouts.append(workout)
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
-            UserDefaults.standard.set(savedData, forKey: "workouts")
         }
     }
 }
