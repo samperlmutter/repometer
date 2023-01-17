@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
     var body: some View {
-        Button("Buzz", action: {
-            WKInterfaceDevice.current().play(WKHapticType.click)
-        })
-            .padding()
+        Text("hi \(connectivityManager.data)")
+//        List (model.workoutData) { workout in
+//            Text(workout.name).font(.headline)
+//        }
+//        Button("Buzz", action: {
+//            WKInterfaceDevice.current().play(WKHapticType.click)
+//        })
+//            .padding()
     }
 }
 

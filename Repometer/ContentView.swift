@@ -15,33 +15,35 @@ struct WorkoutItem: Identifiable {
 struct ContentView: View {
     @State var showingCreateSheet = false
     @State var workouts = [Workout]()
-    @State var reachable = "No"
-    @State var messageText = ""
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(workouts) { workout in
-                    NavigationLink(destination: WorkoutView(workout: workout)) {
-                        Text(workout.name)
-                                .font(.headline)
+            VStack {
+                List {
+                    ForEach(workouts) { workout in
+                        NavigationLink(destination: WorkoutView(workout: workout)) {
+                            Text(workout.name)
+                                    .font(.headline)
+                        }
                     }
+                            .onDelete { i in
+                                workouts.remove(atOffsets: i)
+                                if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
+                                    UserDefaults.standard.set(savedData, forKey: "workouts")
+                                }
+                            }
                 }
-                .onDelete { i in
-                    workouts.remove(atOffsets: i)
-                    if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false) {
-                        UserDefaults.standard.set(savedData, forKey: "workouts")
-                    }
+                        .onAppear {
+                            let defaults = UserDefaults.standard
+                            if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
+                                if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
+                                    workouts = decodedWorkouts
+                                }
+                            }
+                        }
+                Button("Send message") {
+                    WatchConnectivityManager.shared.send("Hello world!\n\(Date().ISO8601Format())")
                 }
-            }
-            .onAppear {
-                let defaults = UserDefaults.standard
-                if let savedWorkouts = defaults.object(forKey: "workouts") as? Data {
-                    if let decodedWorkouts = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedWorkouts) as? [Workout] {
-                        workouts = decodedWorkouts
-                    }
-                }
-            }
             }
             .navigationBarTitle("Workouts")
             .toolbar {

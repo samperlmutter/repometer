@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    let workoutItem: WorkoutItem
+    let workout: Workout
     
     var body: some View {
         VStack {
             
         }
-        .navigationBarTitle(workoutItem.name, displayMode: .inline)
+        .navigationBarTitle(workout.name, displayMode: .inline)
     }
 }

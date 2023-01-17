@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Workout: NSObject, NSCoding {
+class Workout: NSObject, NSCoding, Identifiable, Codable {
     var name: String
     var desc: String
     var holdTime: Int

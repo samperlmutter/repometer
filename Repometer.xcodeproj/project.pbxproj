@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27BB637566FD9A4E11768AA1 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */; };
+		27BB64C30853BB6A90D2EB0E /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */; };
 		4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */; };
 		4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */; };
 		4C1BA9C727BC4A5E004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
@@ -27,6 +29,7 @@
 		4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */; };
 		4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */; };
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
+		4C8E545D27DE55E200F62FFF /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0327BD9C3400B2B2BC /* Workout.swift */; };
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
 		4C9CAD0427BD9C3500B2B2BC /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0327BD9C3400B2B2BC /* Workout.swift */; };
@@ -103,6 +106,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
 		4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Repometer/ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -181,6 +185,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27BB60CDD976EF25BC2163DA /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */,
+			);
+			path = WatchConnectivity;
+			sourceTree = "<group>";
+		};
 		4C1BA9B627BC4A59004C3AEC = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +204,7 @@
 				4C1BAA0B27BC4A62004C3AEC /* Repometer WatchKit AppTests */,
 				4C1BAA1527BC4A62004C3AEC /* Repometer WatchKit AppUITests */,
 				4C1BA9C027BC4A5A004C3AEC /* Products */,
+				27BB60CDD976EF25BC2163DA /* WatchConnectivity */,
 			);
 			sourceTree = "<group>";
 		};
@@ -553,6 +566,7 @@
 				4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */,
 				4C9CAD0427BD9C3500B2B2BC /* Workout.swift in Sources */,
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
+				27BB64C30853BB6A90D2EB0E /* WatchConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +596,8 @@
 				4C1BA9FC27BC4A60004C3AEC /* ComplicationController.swift in Sources */,
 				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
 				4C1BA9FA27BC4A60004C3AEC /* NotificationView.swift in Sources */,
+				4C8E545D27DE55E200F62FFF /* Workout.swift in Sources */,
+				27BB637566FD9A4E11768AA1 /* WatchConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
