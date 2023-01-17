@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27BB637566FD9A4E11768AA1 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */; };
-		27BB64C30853BB6A90D2EB0E /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */; };
+		27BB637566FD9A4E11768AA1 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* Connectivity.swift */; };
+		27BB64C30853BB6A90D2EB0E /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB6D0C07F4CDD20F85522F /* Connectivity.swift */; };
 		4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */; };
 		4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */; };
 		4C1BA9C727BC4A5E004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
@@ -31,6 +31,8 @@
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
+		896501E62977213700D9E5C8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
+		896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
 		8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
 		8967FB4A297704C6008AE937 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 /* End PBXBuildFile section */
@@ -106,7 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		27BB6D0C07F4CDD20F85522F /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
 		4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Repometer/ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -189,7 +191,7 @@
 		27BB60CDD976EF25BC2163DA /* WatchConnectivity */ = {
 			isa = PBXGroup;
 			children = (
-				27BB6D0C07F4CDD20F85522F /* WatchConnectivityManager.swift */,
+				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
 			);
 			path = WatchConnectivity;
 			sourceTree = "<group>";
@@ -568,7 +570,7 @@
 				4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */,
 				4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */,
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
-				27BB64C30853BB6A90D2EB0E /* WatchConnectivityManager.swift in Sources */,
+				27BB64C30853BB6A90D2EB0E /* Connectivity.swift in Sources */,
 				8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,8 +600,10 @@
 				4C1BA9F627BC4A60004C3AEC /* ContentView.swift in Sources */,
 				4C1BA9FC27BC4A60004C3AEC /* ComplicationController.swift in Sources */,
 				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
+				896501E62977213700D9E5C8 /* DataController.swift in Sources */,
 				4C1BA9FA27BC4A60004C3AEC /* NotificationView.swift in Sources */,
-				27BB637566FD9A4E11768AA1 /* WatchConnectivityManager.swift in Sources */,
+				27BB637566FD9A4E11768AA1 /* Connectivity.swift in Sources */,
+				896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

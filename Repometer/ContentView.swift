@@ -11,6 +11,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State var showingCreateSheet = false
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
+    @StateObject var connectivity = Connectivity()
 
     var body: some View {
         NavigationView {
@@ -30,7 +31,8 @@ struct ContentView: View {
                     }
                 }
                 Button("Send message") {
-                    WatchConnectivityManager.shared.send("Hello world!\n\(Date().ISO8601Format())")
+                    let data = ["text": "Hello world!\n\(Date().ISO8601Format())"]
+                    connectivity.sendMessage(data)
                 }
             }
             .navigationBarTitle("Workouts")

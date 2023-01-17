@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct RepometerApp: App {
+    @StateObject private var dataController = DataController()
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
