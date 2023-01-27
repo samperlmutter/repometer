@@ -10,6 +10,7 @@ import CoreData
 
 class DataController : ObservableObject {
     let container = NSPersistentContainer(name: "Repometer")
+    static let shared = DataController()
     
     init() {
         container.loadPersistentStores { description, error in

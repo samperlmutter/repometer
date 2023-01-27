@@ -12,7 +12,6 @@ struct ContentView: View {
     @State var showingCreateSheet = false
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     @StateObject var connectivity = Connectivity()
-
     var body: some View {
         NavigationView {
             VStack {
@@ -21,7 +20,7 @@ struct ContentView: View {
                         NavigationLink {
                             WorkoutView(workout: workout)
                         } label: {
-                            Text(workout.name ?? "Unknown")
+                            Text(workout.name)
                                     .font(.headline)
                         }
                     }
@@ -29,10 +28,6 @@ struct ContentView: View {
                         moc.delete(workouts[i.first!])
                         try? moc.save()
                     }
-                }
-                Button("Send message") {
-                    let data = ["text": "Hello world!\n\(Date().ISO8601Format())"]
-                    connectivity.sendMessage(data)
                 }
             }
             .navigationBarTitle("Workouts")
