@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var showingCreateSheet = false
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     @StateObject var connectivity = Connectivity()
+
     var body: some View {
         NavigationView {
             VStack {
@@ -27,6 +28,7 @@ struct ContentView: View {
                     .onDelete { i in
                         moc.delete(workouts[i.first!])
                         try? moc.save()
+                        // TODO: send delete
                     }
                 }
             }

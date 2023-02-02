@@ -25,6 +25,7 @@ struct CreateWorkoutView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
+    @StateObject var connectivity = Connectivity()
     @State var name: String = ""
     @State var description: String = ""
     @State var holdTime: Int32? = nil
@@ -73,6 +74,7 @@ struct CreateWorkoutView: View {
                     workout.numReps = numReps ?? 0
                     workout.numSets = numSets ?? 0
                     try? moc.save()
+                    connectivity.send(workout)
                     dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())
