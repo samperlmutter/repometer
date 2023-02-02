@@ -35,15 +35,23 @@ struct ContentView: View {
             .navigationBarTitle("Workouts")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {
+                        let workoutsArray = workouts.map({ workout in
+                            workout
+                        })
+                        connectivity.send(.sync(workoutsArray))
+                    }, label: {
+                        Image(systemName: "arrow.triangle.2.circlepath")
+                    })
                     Spacer()
                     Button(action: {
                         showingCreateSheet.toggle()
                     }, label: {
                         Image(systemName: "square.and.pencil")
                     })
-                        .sheet(isPresented: $showingCreateSheet, content: {
-                            CreateWorkoutView()
-                        })
+                    .sheet(isPresented: $showingCreateSheet, content: {
+                        CreateWorkoutView()
+                    })
                 }
             }
         }

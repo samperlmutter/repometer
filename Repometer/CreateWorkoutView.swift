@@ -74,7 +74,7 @@ struct CreateWorkoutView: View {
                     workout.numReps = numReps ?? 0
                     workout.numSets = numSets ?? 0
                     try? moc.save()
-                    connectivity.send(workout)
+                    connectivity.send(.add(workout))
                     dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())
