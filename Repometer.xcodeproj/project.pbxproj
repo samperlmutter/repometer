@@ -16,7 +16,7 @@
 		4C1BA9D427BC4A5F004C3AEC /* RepometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9D327BC4A5F004C3AEC /* RepometerTests.swift */; };
 		4C1BA9DE27BC4A5F004C3AEC /* RepometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9DD27BC4A5F004C3AEC /* RepometerUITests.swift */; };
 		4C1BA9E027BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9DF27BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift */; };
-		4C1BA9E427BC4A5F004C3AEC /* Repometer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C1BA9E427BC4A5F004C3AEC /* Repometer.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C1BA9E327BC4A5F004C3AEC /* Repometer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C1BA9E927BC4A60004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9E827BC4A60004C3AEC /* Assets.xcassets */; };
 		4C1BA9EF27BC4A60004C3AEC /* Repometer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */; };
@@ -103,7 +103,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				4C1BA9E427BC4A5F004C3AEC /* Repometer WatchKit App.app in Embed Watch Content */,
+				4C1BA9E427BC4A5F004C3AEC /* Repometer.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +122,7 @@
 		4C1BA9D927BC4A5F004C3AEC /* RepometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9DD27BC4A5F004C3AEC /* RepometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerUITests.swift; sourceTree = "<group>"; };
 		4C1BA9DF27BC4A5F004C3AEC /* RepometerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repometer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BA9E327BC4A5F004C3AEC /* Repometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9E827BC4A60004C3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Repometer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				4C1BA9BF27BC4A5A004C3AEC /* Repometer.app */,
 				4C1BA9CF27BC4A5F004C3AEC /* RepometerTests.xctest */,
 				4C1BA9D927BC4A5F004C3AEC /* RepometerUITests.xctest */,
-				4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */,
+				4C1BA9E327BC4A5F004C3AEC /* Repometer.app */,
 				4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */,
 				4C1BAA0827BC4A62004C3AEC /* Repometer WatchKit AppTests.xctest */,
 				4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */,
@@ -393,7 +393,7 @@
 			);
 			name = "Repometer WatchKit App";
 			productName = "Repometer WatchKit App";
-			productReference = 4C1BA9E327BC4A5F004C3AEC /* Repometer WatchKit App.app */;
+			productReference = 4C1BA9E327BC4A5F004C3AEC /* Repometer.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		4C1BA9ED27BC4A60004C3AEC /* Repometer WatchKit Extension */ = {
@@ -857,12 +857,11 @@
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Repometer_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.samperlmutter.Repometer;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Repometer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -883,12 +882,11 @@
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Repometer_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.samperlmutter.Repometer;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.Repometer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Repometer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -910,6 +908,7 @@
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Repometer;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -941,6 +940,7 @@
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Repometer;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
