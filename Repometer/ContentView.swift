@@ -32,7 +32,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Workouts")
+            .navigationTitle("Workouts")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {

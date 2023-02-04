@@ -84,3 +84,9 @@ struct CreateWorkoutView: View {
         }
     }
 }
+
+struct CreateWorkoutView_Previews: PreviewProvider {
+    static var previews: some View {
+        CreateWorkoutView()
+    }
+}

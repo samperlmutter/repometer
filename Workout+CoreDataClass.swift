@@ -52,6 +52,20 @@ public class Workout: NSManagedObject, Codable {
         try container.encode(numReps, forKey: .numReps)
         try container.encode(numSets, forKey: .numSets)
     }
+
+    #if DEBUG
+    public static func example() -> Workout {
+        let example = Workout(context: DataController.shared.container.viewContext)
+        example.id = UUID()
+        example.name = "plank"
+        example.desc = "do a plank"
+        example.holdTime = 30
+        example.numReps = 1
+        example.numSets = 2
+        
+        return example
+    }
+    #endif
 }
 
 extension Workout : Identifiable {}
