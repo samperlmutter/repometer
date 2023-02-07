@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Workout)
+//@objc(Workout)
 public class Workout: NSManagedObject, Codable {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Workout> {
         return NSFetchRequest<Workout>(entityName: "Workout")
@@ -57,11 +57,11 @@ public class Workout: NSManagedObject, Codable {
     public static func example() -> Workout {
         let example = Workout(context: DataController.shared.container.viewContext)
         example.id = UUID()
-        example.name = "plank"
-        example.desc = "do a plank"
-        example.holdTime = 30
-        example.numReps = 1
-        example.numSets = 2
+        example.name = "bridge"
+        example.desc = "thrust upward. be the bridge between worlds"
+        example.holdTime = 5
+        example.numReps = 10
+        example.numSets = 3
         
         return example
     }

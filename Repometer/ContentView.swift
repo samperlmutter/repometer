@@ -19,7 +19,7 @@ struct ContentView: View {
                 List {
                     ForEach(workouts) { workout in
                         NavigationLink {
-                            WorkoutView(workout: workout)
+                            WorkoutDetailView(workout: workout)
                         } label: {
                             Text(workout.name)
                                     .font(.headline)

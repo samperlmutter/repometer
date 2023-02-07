@@ -1,5 +1,5 @@
 //
-//  WorkoutView.swift
+//  WorkoutDetailView.swift
 //  Repometer WatchKit Extension
 //
 //  Created by Sam Perlmutter on 1/17/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkoutView: View {
+struct WorkoutDetailView: View {
     let workout: Workout
     var body: some View {
         VStack {
@@ -19,15 +19,12 @@ struct WorkoutView: View {
         }
         .navigationTitle(workout.name)
         .navigationBarTitleDisplayMode(.inline)
-//        Button("update", action: {
-//            WKInterfaceDevice.current().play(WKHapticType.click)
-//        })
     }
 }
 
-struct WorkoutView_Previews: PreviewProvider {
+struct WorkoutDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        return WorkoutView(workout: Workout.example())
-            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 (45mm)"))
+        return WorkoutDetailView(workout: Workout.example())
+            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 - (45mm)"))
     }
 }

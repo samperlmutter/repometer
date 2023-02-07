@@ -29,15 +29,16 @@
 		4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */; };
 		4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */; };
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
-		4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */; };
+		4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
+		894B5253298ECFCE00DA950A /* WorkoutActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */; };
 		896501E62977213700D9E5C8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 		896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
 		8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
 		8967FB4A297704C6008AE937 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 		899B92F92982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
 		899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
-		89D2F2AD29773BE50004D881 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2F2AC29773BE50004D881 /* WorkoutView.swift */; };
+		89D2F2AD29773BE50004D881 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,12 +140,13 @@
 		4C1BAA1227BC4A62004C3AEC /* Repometer WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repometer WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
+		894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutActiveView.swift; sourceTree = "<group>"; };
 		8967FB4729770476008AE937 /* Repometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repometer.xcdatamodel; sourceTree = "<group>"; };
 		8967FB49297704C6008AE937 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
-		89D2F2AC29773BE50004D881 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,7 +241,7 @@
 				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
 				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
 				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
-				4C9CACFF27BC8BB800B2B2BC /* WorkoutView.swift */,
+				4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */,
 				4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */,
 				8967FB49297704C6008AE937 /* DataController.swift */,
 			);
@@ -291,7 +293,8 @@
 				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
 				4C1BAA0327BC4A62004C3AEC /* PushNotificationPayload.apns */,
 				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
-				89D2F2AC29773BE50004D881 /* WorkoutView.swift */,
+				89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */,
+				894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */,
 			);
 			path = "Repometer WatchKit Extension";
 			sourceTree = "<group>";
@@ -575,7 +578,7 @@
 				8967FB4A297704C6008AE937 /* DataController.swift in Sources */,
 				4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */,
 				4C1BA9C527BC4A5A004C3AEC /* ContentView.swift in Sources */,
-				4C9CAD0027BC8BB800B2B2BC /* WorkoutView.swift in Sources */,
+				4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */,
 				899B92F92982329C00080C4D /* Workout+CoreDataClass.swift in Sources */,
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
 				27BB64C30853BB6A90D2EB0E /* Connectivity.swift in Sources */,
@@ -608,10 +611,11 @@
 				4C1BA9F627BC4A60004C3AEC /* ContentView.swift in Sources */,
 				4C1BA9FC27BC4A60004C3AEC /* ComplicationController.swift in Sources */,
 				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
-				89D2F2AD29773BE50004D881 /* WorkoutView.swift in Sources */,
+				89D2F2AD29773BE50004D881 /* WorkoutDetailView.swift in Sources */,
 				896501E62977213700D9E5C8 /* DataController.swift in Sources */,
 				4C1BA9FA27BC4A60004C3AEC /* NotificationView.swift in Sources */,
 				27BB637566FD9A4E11768AA1 /* Connectivity.swift in Sources */,
+				894B5253298ECFCE00DA950A /* WorkoutActiveView.swift in Sources */,
 				896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */,
 				899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */,
 			);

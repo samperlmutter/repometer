@@ -1,15 +1,15 @@
 //
-//  WorkoutView.swift
+//  WorkoutDetailView.swift
 //  Repometer
 //
 //  Created by Sam Perlmutter on 2/15/22.
 //
 
 import SwiftUI
- 
-struct WorkoutView: View {
+
+struct WorkoutDetailView: View {
     let workout: Workout
-    
+
     var body: some View {
         VStack {
             Text(workout.desc ?? "")
@@ -23,9 +23,9 @@ struct WorkoutView: View {
     }
 }
 
-struct WorkoutView_Previews: PreviewProvider {
+struct WorkoutDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        return WorkoutView(workout: Workout.example())
+        return WorkoutDetailView(workout: Workout.example())
             .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
     }
 }

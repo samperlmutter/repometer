@@ -16,15 +16,25 @@ struct ContentView: View {
                 List {
                     ForEach(connectivity.workouts) { workout in
                         NavigationLink {
-                            WorkoutView(workout: workout)
+                            WorkoutActiveView(workout: workout)
                         } label: {
                             Text(workout.name)
                                 .font(.headline)
                         }
                     }
                 }
+                .listStyle(.carousel)
             }
             .navigationTitle("Workouts")
+        }
+        .onAppear() {
+            #if DEBUG
+            connectivity.workouts.append(Workout.example())
+            connectivity.workouts.append(Workout.example())
+            connectivity.workouts.append(Workout.example())
+            connectivity.workouts.append(Workout.example())
+            connectivity.workouts.append(Workout.example())
+            #endif
         }
     }
 }
