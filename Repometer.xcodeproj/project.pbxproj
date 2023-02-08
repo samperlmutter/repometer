@@ -142,6 +142,8 @@
 		4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repometer_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
+		892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Repometer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		892B58F529931CB600D5251A /* Repometer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Repometer.entitlements; sourceTree = "<group>"; };
 		894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutActiveView.swift; sourceTree = "<group>"; };
 		8967FB4729770476008AE937 /* Repometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repometer.xcdatamodel; sourceTree = "<group>"; };
 		8967FB49297704C6008AE937 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		4C1BA9C127BC4A5A004C3AEC /* Repometer */ = {
 			isa = PBXGroup;
 			children = (
+				892B58F529931CB600D5251A /* Repometer.entitlements */,
 				4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */,
 				4C1BA9C427BC4A5A004C3AEC /* ContentView.swift */,
 				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
@@ -284,6 +287,7 @@
 		4C1BA9F227BC4A60004C3AEC /* Repometer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */,
 				4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */,
 				4C1BA9F527BC4A60004C3AEC /* ContentView.swift */,
 				4C1BA9F727BC4A60004C3AEC /* NotificationController.swift */,
@@ -789,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Repometer WatchKit Extension/Repometer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Repometer WatchKit Extension/Preview Content\"";
@@ -797,7 +802,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Repometer_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -821,6 +826,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Repometer WatchKit Extension/Repometer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Repometer WatchKit Extension/Preview Content\"";
@@ -829,7 +835,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Repometer_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -906,6 +912,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Repometer/Repometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Repometer/Preview Content\"";
@@ -938,6 +945,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Repometer/Repometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Repometer/Preview Content\"";
