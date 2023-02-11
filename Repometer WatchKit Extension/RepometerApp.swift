@@ -13,10 +13,8 @@ struct RepometerApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                WorkoutsView()
             }
         }
-
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

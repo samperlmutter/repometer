@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WorkoutsView.swift
 //  Repometer
 //
 //  Created by Sam Perlmutter on 2/15/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WorkoutsView: View {
     @Environment(\.managedObjectContext) var moc
     @State var showingCreateSheet = false
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
@@ -58,8 +58,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WorkoutsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WorkoutsView()
     }
 }

@@ -12,7 +12,7 @@ struct RepometerApp: App {
     @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WorkoutsView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
