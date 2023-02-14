@@ -29,6 +29,7 @@
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
 		894B5253298ECFCE00DA950A /* WorkoutActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */; };
+		894F3EBC29980B19000C9EE7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */; };
 		896501E62977213700D9E5C8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 		896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
 		8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB4629770476008AE937 /* Repometer.xcdatamodeld */; };
@@ -138,6 +139,7 @@
 		892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Repometer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		892B58F529931CB600D5251A /* Repometer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Repometer.entitlements; sourceTree = "<group>"; };
 		894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutActiveView.swift; sourceTree = "<group>"; };
+		894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		8967FB4729770476008AE937 /* Repometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repometer.xcdatamodel; sourceTree = "<group>"; };
 		8967FB49297704C6008AE937 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
 				89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */,
 				894B5252298ECFCE00DA950A /* WorkoutActiveView.swift */,
+				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
 			);
 			path = "Repometer WatchKit Extension";
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			files = (
 				4C1BA9F627BC4A60004C3AEC /* WorkoutsView.swift in Sources */,
 				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
+				894F3EBC29980B19000C9EE7 /* WorkoutManager.swift in Sources */,
 				89D2F2AD29773BE50004D881 /* WorkoutDetailView.swift in Sources */,
 				896501E62977213700D9E5C8 /* DataController.swift in Sources */,
 				27BB637566FD9A4E11768AA1 /* Connectivity.swift in Sources */,

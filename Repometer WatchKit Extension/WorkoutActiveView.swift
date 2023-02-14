@@ -8,58 +8,70 @@
 import SwiftUI
 
 struct WorkoutActiveView: View {
-    @Environment(\.scenePhase) private var scenePhase
+    @EnvironmentObject var workoutManager: WorkoutManager
     let workout: Workout
     let resetTime = 2 // should be user preference eventually
     @State private var set = 1
     @State private var rep = 1
-    @State private var holdTime: Int32 = 0
-    @State private var playing = true // false in DEBUG
-    @State private var betweenReps = true // false in DEBUG
+    @State private var holdTime = 0
+    @State private var isPaused = false
+    @State private var holding = false
     @State private var releaseTime = 0
     let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     var body: some View {
-        VStack {
-            Button(action: {
-                playing = !playing
-            }, label: {
-                Image(systemName: playing ? "pause.fill" : "play.fill")
-            })
-            .font(.title2)
-            Text(betweenReps ? "Release for" : "Hold for")
-                .font(.subheadline)
-            Text("\(betweenReps ? releaseTime : Int(holdTime))")
-                .font(.title)
-            Spacer()
-            HStack {
-                Text("Set \(set)/\(workout.numSets)")
+        TimelineView(.periodic(from: workoutManager.builder?.startDate ?? Date(), by: 1)) { _ in
+            VStack {
+                Button(action: {
+                    if isPaused {
+                        resumeWorkout()
+                    } else {
+                        pauseWorkout()
+                    }
+                }, label: {
+                    Image(systemName: isPaused ? "play.fill" : "pause.fill")
+                })
+                .font(.title2)
+                Text(holding ? "Hold for" : "Release for")
+                    .font(.subheadline)
+                Text("\(holding ? Int(holdTime) : releaseTime)")
+                    .font(.title)
                 Spacer()
-                Text("Rep \(rep)/\(workout.numReps)")
+                HStack {
+                    Text("Set \(set)/\(workout.numSets)")
+                    Spacer()
+                    Text("Rep \(rep)/\(workout.numReps)")
+                }
+                .padding([.top, .horizontal])
             }
-            .padding([.top, .horizontal])
         }
         .navigationTitle(workout.name)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            workoutManager.startWorkout()
             workout.numReps = 3 // DEBUG
-            holdTime = workout.holdTime
+            holdTime = Int(workout.holdTime)
             releaseTime = resetTime
         }
         .onReceive(timer) { _ in
-            if betweenReps {
-                decrementReleaseTime()
-            } else {
-                decrementHoldTime()
+            if !isPaused {
+                if holding {
+                    decrementHoldTime()
+                } else {
+                    decrementReleaseTime()
+                }
             }
+        }
+        .onDisappear() {
+            workoutManager.endWorkout()
         }
     }
     
     func decrementHoldTime() {
-        if playing {
+        if holding {
             holdTime -= 1
         }
         if holdTime < 0 {
-            holdTime = workout.holdTime
+            holdTime = Int(workout.holdTime)
             endOfRep()
         }
     }
@@ -69,7 +81,7 @@ struct WorkoutActiveView: View {
             endOfSet()
         } else {
             rep += 1
-            betweenReps = true
+            holding = false
             WKInterfaceDevice.current().play(.stop)
         }
     }
@@ -81,7 +93,7 @@ struct WorkoutActiveView: View {
             set += 1
             rep = 1
         }
-        playing = false
+        pauseWorkout()
         WKInterfaceDevice.current().play(.retry)
     }
 
@@ -89,17 +101,25 @@ struct WorkoutActiveView: View {
         releaseTime -= 1
         if releaseTime < 0 {
             releaseTime = resetTime
-            betweenReps = false
+            holding = true
             WKInterfaceDevice.current().play(.success)
         }
+    }
+    
+    func pauseWorkout() {
+        isPaused = true
+        workoutManager.pause()
+    }
+    
+    func resumeWorkout() {
+        isPaused = false
+        workoutManager.resume()
     }
 }
 
 struct WorkoutActiveView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-//            WorkoutActiveView(workout: Workout.example())
-//                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 (41mm)"))
             WorkoutActiveView(workout: Workout.example())
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 (45mm)"))
         }
