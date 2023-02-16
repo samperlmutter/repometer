@@ -17,7 +17,7 @@ struct WorkoutsView: View {
                 List {
                     ForEach(connectivity.workouts) { workout in
                         NavigationLink {
-                            WorkoutActiveView(workout: workout)
+                            WorkoutTabView(workout: workout)
                         } label: {
                             Text(workout.name)
                                 .font(.headline)

@@ -1,5 +1,5 @@
 //
-//  WorkoutActiveView.swift
+//  WorkoutCounterView.swift
 //  Repometer WatchKit Extension
 //
 //  Created by Sam Perlmutter on 2/4/23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct WorkoutActiveView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+struct WorkoutCounterView: View {
     let workout: Workout
+    @EnvironmentObject var workoutManager: WorkoutManager
     let resetTime = 2 // should be user preference eventually
     @State private var set = 1
     @State private var rep = 1
@@ -44,11 +44,8 @@ struct WorkoutActiveView: View {
                 .padding([.top, .horizontal])
             }
         }
-        .navigationTitle(workout.name)
-        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             workoutManager.startWorkout()
-            workout.numReps = 3 // DEBUG
             holdTime = Int(workout.holdTime)
             releaseTime = resetTime
         }
@@ -117,11 +114,9 @@ struct WorkoutActiveView: View {
     }
 }
 
-struct WorkoutActiveView_Previews: PreviewProvider {
+struct WorkoutCounterView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            WorkoutActiveView(workout: Workout.example())
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 (45mm)"))
-        }
+        WorkoutCounterView(workout: Workout.example())
+            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 8 (45mm)"))
     }
 }
