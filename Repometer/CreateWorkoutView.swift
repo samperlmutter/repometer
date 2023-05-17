@@ -22,10 +22,8 @@ struct SaveButtonStyle: ButtonStyle {
 }
 
 struct CreateWorkoutView: View {
-    @Environment(\.managedObjectContext) var moc
+    @ObservedObject private var cwd = CoreWorkoutData.shared
     @Environment(\.dismiss) var dismiss
-    @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
-    @StateObject var connectivity = Connectivity()
     @State var name: String = ""
     @State var description: String = ""
     @State var holdTime: Int32? = nil
@@ -66,15 +64,7 @@ struct CreateWorkoutView: View {
                     }
                 }
                 Button("Save") {
-                    let workout = Workout(context: moc)
-                    workout.id = UUID()
-                    workout.name = name
-                    workout.desc = description
-                    workout.holdTime = holdTime ?? 0
-                    workout.numReps = numReps ?? 0
-                    workout.numSets = numSets ?? 0
-                    try? moc.save()
-                    connectivity.send(.add(workout))
+                    cwd.createWorkout(UUID(), name, description, holdTime ?? 0, numReps ?? 0, numSets ?? 0)
                     dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())

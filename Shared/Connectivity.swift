@@ -9,13 +9,14 @@ import Foundation
 import WatchConnectivity
 
 public enum WorkoutUpdate: Codable {
-    case delete(_ id: UUID)
+    case delete(_ workout: Workout)
     case update(_ workout: Workout)
     case add(_ workout: Workout)
     case sync(_ workouts: [Workout])
 }
 
 class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
+    static let shared = Connectivity()
     @Published var workouts: [Workout] = []
 
     override init() {
@@ -33,6 +34,7 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         Task { @MainActor in
             if activationState == .activated {
                 if session.isWatchAppInstalled {
+                    self.workouts = CoreWorkoutData.shared.workouts
                     // TODO: beep
                 }
             }
@@ -76,6 +78,8 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
                     self.workouts.append(workout)
                 case let .sync(workouts):
                     self.workouts = workouts
+                case let .delete(workout):
+                    self.workouts.removeAll { $0 == workout }
                 default:
                     break
                 }

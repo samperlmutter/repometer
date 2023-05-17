@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct WorkoutsView: View {
-    @Environment(\.managedObjectContext) var moc
+    @ObservedObject private var cwd = CoreWorkoutData.shared
     @State var showingCreateSheet = false
-    @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     @StateObject var connectivity = Connectivity()
 
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(workouts) { workout in
+                    ForEach(cwd.workouts) { workout in
                         NavigationLink {
                             WorkoutDetailView(workout: workout)
                         } label: {
@@ -26,9 +25,7 @@ struct WorkoutsView: View {
                         }
                     }
                     .onDelete { i in
-                        moc.delete(workouts[i.first!])
-                        try? moc.save()
-                        // TODO: send delete
+                        cwd.deleteWorkout(cwd.workouts[i.first!])
                     }
                 }
             }
@@ -36,7 +33,7 @@ struct WorkoutsView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {
-                        let workoutsArray = workouts.map({ workout in
+                        let workoutsArray = cwd.workouts.map({ workout in
                             workout
                         })
                         connectivity.send(.sync(workoutsArray))

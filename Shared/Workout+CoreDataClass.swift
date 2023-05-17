@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-//@objc(Workout)
 public class Workout: NSManagedObject, Codable {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Workout> {
         return NSFetchRequest<Workout>(entityName: "Workout")

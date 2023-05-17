@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WorkoutsView: View {
+    @ObservedObject private var connectivity = Connectivity.shared
     @EnvironmentObject var workoutManager: WorkoutManager
-    @StateObject var connectivity = Connectivity()
     @State private var showingAlert = false
     var body: some View {
         NavigationView {
@@ -30,13 +30,6 @@ struct WorkoutsView: View {
         }
         .onAppear() {
             workoutManager.requestAuthorization()
-            #if DEBUG
-            connectivity.workouts.append(Workout.example())
-            connectivity.workouts.append(Workout.example())
-            connectivity.workouts.append(Workout.example())
-            connectivity.workouts.append(Workout.example())
-            connectivity.workouts.append(Workout.example())
-            #endif
         }
     }
 }
