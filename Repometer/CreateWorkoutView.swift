@@ -64,7 +64,7 @@ struct CreateWorkoutView: View {
                     }
                 }
                 Button("Save") {
-                    cwd.createWorkout(UUID(), name, description, holdTime ?? 0, numReps ?? 0, numSets ?? 0)
+                    cwd.addWorkout(UUID(), name, description, holdTime ?? 0, numReps ?? 0, numSets ?? 0)
                     dismiss()
                 }
                 .buttonStyle(SaveButtonStyle())

@@ -32,7 +32,7 @@ final class CoreWorkoutData : NSObject, ObservableObject {
         Connectivity.shared.workouts = workouts
     }
     
-    public func createWorkout(_ id: UUID, _ name: String, _ desc: String, _ holdTime: Int32, _ numReps: Int32, _ numSets: Int32) {
+    public func addWorkout(_ id: UUID, _ name: String, _ desc: String, _ holdTime: Int32, _ numReps: Int32, _ numSets: Int32) {
         let workout = Workout(context: moc)
         workout.id = id
         workout.name = name
@@ -50,6 +50,7 @@ final class CoreWorkoutData : NSObject, ObservableObject {
         Connectivity.shared.send(.add(workout))
     }
     
+    // TODO:
     public func updateWorkout(_ workout: Workout) {
         
         if moc.hasChanges {
