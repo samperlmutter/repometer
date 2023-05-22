@@ -9,7 +9,7 @@ import Foundation
 import WatchConnectivity
 
 public enum WorkoutUpdate: Codable {
-    case delete(_ workout: Workout)
+    case delete(_ workoutId: UUID)
     case update(_ workout: Workout)
     case add(_ workout: Workout)
     case sync(_ workouts: [Workout])
@@ -92,8 +92,8 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
                     self.workouts.append(workout)
                 case let .sync(workouts):
                     self.workouts = workouts
-                case let .delete(workout):
-                    self.workouts.removeAll { $0 == workout }
+                case let .delete(workoutId):
+                    self.workouts.removeAll { $0.id == workoutId }
                 default:
                     break
                 }

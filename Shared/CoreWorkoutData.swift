@@ -57,13 +57,12 @@ final class CoreWorkoutData : NSObject, ObservableObject {
     }
     
     public func deleteWorkout(_ workout: Workout) {
+        workouts.removeAll { $0.id == workout.id }
+        Connectivity.shared.send(.delete(workout.id))
+
         moc.delete(workout)
-        
         if moc.hasChanges {
             try? moc.save()
         }
-        
-        workouts.removeAll { $0 == workout }
-        Connectivity.shared.send(.delete(workout))
     }
 }
