@@ -28,8 +28,6 @@ final class CoreWorkoutData : NSObject, ObservableObject {
         } catch {
             print("Failed to fetch workouts: \(error.localizedDescription)")
         }
-        
-        Connectivity.shared.workouts = workouts
     }
     
     public func addWorkout(_ id: UUID, _ name: String, _ desc: String, _ holdTime: Int32, _ numReps: Int32, _ numSets: Int32) {

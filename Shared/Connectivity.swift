@@ -34,7 +34,6 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         Task { @MainActor in
             if activationState == .activated {
                 if session.isWatchAppInstalled {
-                    self.workouts = CoreWorkoutData.shared.workouts
                     // TODO: beep
                 }
             }
@@ -53,26 +52,41 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     }
     #endif
 
-    func send(_ updateType: WorkoutUpdate) {
+    func send(_ update: WorkoutUpdate) {
         let session = WCSession.default
 
-        if session.activationState == .activated {
-            do {
-                let jsonWorkoutUpdate = String(data: try JSONEncoder().encode(updateType), encoding: .utf8)!
-                try session.updateApplicationContext(["workoutData": jsonWorkoutUpdate])
-            } catch {
-                print("failed sending")
-            }
+        guard session.activationState == .activated else {
+            print("not activated")
+            return
+        }
+
+        #if os(iOS)
+        guard session.isWatchAppInstalled else {
+            print("watch app not installed")
+            return
+        }
+        #else
+        guard session.isCompanionAppInstalled else {
+            print("ios app not installed")
+            return
+        }
+        #endif
+
+        do {
+            let jsonWorkoutUpdate = String(data: try JSONEncoder().encode(update), encoding: .utf8)!
+            session.transferUserInfo(["workoutData": jsonWorkoutUpdate])
+        } catch {
+            print("failed sending")
         }
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any]) {
         Task { @MainActor in
-            print("received: \(applicationContext["workoutData"] ?? "no data??")")
+            print("received: \(userInfo["workoutData"] ?? "no data??")")
             let decoder = JSONDecoder()
             decoder.userInfo[CodingUserInfoKey.managedObjectContext] = DataController.shared.container.viewContext
             do {
-                let workout = try decoder.decode(WorkoutUpdate.self, from: Data((applicationContext["workoutData"] as! String).utf8))
+                let workout = try decoder.decode(WorkoutUpdate.self, from: Data((userInfo["workoutData"] as! String).utf8))
                 switch (workout) {
                 case let .add(workout):
                     self.workouts.append(workout)
