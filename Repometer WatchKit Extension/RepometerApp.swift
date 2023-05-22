@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct RepometerApp: App {
-    @StateObject private var dataController = DataController()
     @StateObject private var workoutManager = WorkoutManager()
     @SceneBuilder var body: some Scene {
         WindowGroup {

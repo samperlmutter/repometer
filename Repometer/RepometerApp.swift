@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct RepometerApp: App {
-    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             WorkoutsView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environment(\.managedObjectContext, DataController.shared.container.viewContext)
         }
     }
 }

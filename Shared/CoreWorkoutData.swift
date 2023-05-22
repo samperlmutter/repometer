@@ -18,7 +18,7 @@ final class CoreWorkoutData : NSObject, ObservableObject {
     private var cancellable: Set<AnyCancellable> = []
     
     override private init() {
-        self.moc = DataController().container.viewContext
+        self.moc = DataController.shared.container.viewContext
         
         super.init()
 
