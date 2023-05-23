@@ -16,6 +16,9 @@ struct RepometerApp: App {
                 WorkoutsView()
             }
             .environmentObject(workoutManager)
+            .task {
+                Connectivity.shared.send(.syncCheck(Connectivity.shared.workouts.map { $0.id }))
+            }
         }
     }
 }

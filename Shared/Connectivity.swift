@@ -13,6 +13,7 @@ public enum WorkoutUpdate: Codable {
     case update(_ workout: Workout)
     case add(_ workout: Workout)
     case sync(_ workouts: [Workout])
+    case syncCheck(_ workoutIds: [UUID])
 }
 
 class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
@@ -90,8 +91,13 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
                 switch (workout) {
                 case let .add(workout):
                     self.workouts.append(workout)
+                case let .syncCheck(workoutIds):
+                    let missingWorkouts = CoreWorkoutData.shared.workouts.filter { !workoutIds.contains($0.id) }
+                    if !missingWorkouts.isEmpty {
+                        send(.sync(missingWorkouts))
+                    }
                 case let .sync(workouts):
-                    self.workouts = workouts
+                    self.workouts.append(contentsOf: workouts)
                 case let .delete(workoutId):
                     self.workouts.removeAll { $0.id == workoutId }
                 default:

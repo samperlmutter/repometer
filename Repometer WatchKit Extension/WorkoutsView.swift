@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkoutsView: View {
     @ObservedObject private var connectivity = Connectivity.shared
     @EnvironmentObject var workoutManager: WorkoutManager
-    @State private var showingAlert = false
+    
     var body: some View {
         NavigationView {
             VStack {
