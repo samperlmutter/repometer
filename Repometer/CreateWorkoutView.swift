@@ -75,6 +75,13 @@ struct CreateWorkoutView: View {
                 .buttonStyle(SaveButtonStyle())
             }
             .navigationBarTitle("Create Workout", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+            }
             .background(Color(UIColor.systemGroupedBackground))
         }
     }
