@@ -34,7 +34,10 @@ struct CreateWorkoutView: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("INFO")) {
+                    Section(header: Text("Info")
+                        .font(Font.headline)
+                        .foregroundColor(.primary)
+                        .textCase(nil)) {
                         TextField("Name", text: $name)
                         if #available(iOS 16.0, *) {
                             TextField("Description", text: $description, axis: .vertical)
@@ -43,7 +46,10 @@ struct CreateWorkoutView: View {
                             TextField("Description", text: $description)
                         }
                     }
-                    Section(header: Text("ROUTINE")) {
+                    Section(header: Text("Routine")
+                        .font(Font.headline)
+                        .foregroundColor(.primary)
+                        .textCase(nil)) {
                         HStack {
                             Text("Hold for")
                             Spacer()
