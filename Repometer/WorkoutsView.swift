@@ -32,14 +32,6 @@ struct WorkoutsView: View {
             .navigationTitle("Workouts")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: {
-                        let workoutsArray = cwd.workouts.map({ workout in
-                            workout
-                        })
-                        connectivity.send(.sync(workoutsArray))
-                    }, label: {
-                        Image(systemName: "arrow.triangle.2.circlepath")
-                    })
                     Spacer()
                     Button(action: {
                         showingCreateSheet.toggle()
