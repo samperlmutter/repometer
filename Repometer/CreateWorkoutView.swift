@@ -36,7 +36,12 @@ struct CreateWorkoutView: View {
                 Form {
                     Section(header: Text("INFO")) {
                         TextField("Name", text: $name)
-                        TextField("Description", text: $description)
+                        if #available(iOS 16.0, *) {
+                            TextField("Description", text: $description, axis: .vertical)
+                                .lineLimit(5)
+                        } else {
+                            TextField("Description", text: $description)
+                        }
                     }
                     Section(header: Text("ROUTINE")) {
                         HStack {
