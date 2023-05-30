@@ -11,11 +11,11 @@ struct SaveButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             Spacer()
-            configuration.label.foregroundColor(.white)
+            configuration.label.foregroundColor(.white).font(.system(size: 18))
             Spacer()
         }
         .padding()
-        .background(Color.blue.cornerRadius(8))
+        .background(Color.blue.cornerRadius(16))
         .padding()
         .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
@@ -63,7 +63,7 @@ struct CreateWorkoutView: View {
                         }
                     }
                 }
-                Button("Save") {
+                Button("Create") {
                     cwd.addWorkout(UUID(), name, description, holdTime ?? 0, numReps ?? 0, numSets ?? 0)
                     dismiss()
                 }
