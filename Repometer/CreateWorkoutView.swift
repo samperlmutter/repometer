@@ -75,7 +75,7 @@ struct CreateWorkoutView: View {
                 .buttonStyle(SaveButtonStyle())
             }
             .navigationBarTitle("Create Workout", displayMode: .inline)
-            
+            .background(Color(UIColor.systemGroupedBackground))
         }
     }
 }
