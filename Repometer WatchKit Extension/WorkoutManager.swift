@@ -88,43 +88,10 @@ public class WorkoutManager: NSObject, ObservableObject {
     func endWorkout() {
         session?.end()
     }
-    
-    // MARK: - Workout Metrics
-//    @Published var averageHeartRate: Double = 0
-//    @Published var heartRate: Double = 0
-//    @Published var activeEnergy: Double = 0
-//    @Published var distance: Double = 0
-//    @Published var workout: HKWorkout?
-//
-//    func updateForStatistics(_ statistics: HKStatistics?) {
-//        guard let statistics = statistics else { return }
-//
-//        DispatchQueue.main.async {
-//            switch statistics.quantityType {
-//            case HKQuantityType.quantityType(forIdentifier: .heartRate):
-//                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-//                self.heartRate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-//                self.averageHeartRate = statistics.averageQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-//            case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
-//                let energyUnit = HKUnit.kilocalorie()
-//                self.activeEnergy = statistics.sumQuantity()?.doubleValue(for: energyUnit) ?? 0
-//            case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning), HKQuantityType.quantityType(forIdentifier: .distanceCycling):
-//                let meterUnit = HKUnit.meter()
-//                self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
-//            default:
-//                return
-//            }
-//        }
-//    }
 
     func resetWorkout() {
         builder = nil
         session = nil
-//        workout = nil
-//        activeEnergy = 0
-//        averageHeartRate = 0
-//        heartRate = 0
-//        distance = 0
     }
 }
 

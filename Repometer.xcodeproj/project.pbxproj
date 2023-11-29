@@ -28,6 +28,7 @@
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
+		89313B5C2AD623D8004CBDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
 		894B5253298ECFCE00DA950A /* WorkoutCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */; };
 		894F3EBC29980B19000C9EE7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */; };
 		896501E62977213700D9E5C8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
@@ -546,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89313B5C2AD623D8004CBDE7 /* Assets.xcassets in Resources */,
 				4C1BA9E927BC4A60004C3AEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -916,6 +918,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Repometer/Repometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -949,6 +952,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Repometer/Repometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

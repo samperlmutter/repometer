@@ -10,14 +10,26 @@ import SwiftUI
 struct WorkoutCounterView: View {
     let workout: Workout
     @EnvironmentObject var workoutManager: WorkoutManager
-    let resetTime = 2 // should be user preference eventually
-    @State private var set = 1
-    @State private var rep = 1
-    @State private var holdTime = 0
-    @State private var isPaused = false
-    @State private var holding = false
-    @State private var releaseTime = 0
+    let resetTime: Int // should be user preference eventually
+    @State private var set: Int
+    @State private var rep: Int
+    @State private var holdTime: Int
+    @State private var isPaused: Bool
+    @State private var holding: Bool
+    @State private var releaseTime: Int
     let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
+    
+    init(workout: Workout) {
+        self.workout = workout
+        self.set = 1
+        self.rep = 1
+        self.holdTime = Int(workout.holdTime)
+        self.isPaused = false
+        self.holding = false
+        self.resetTime = 2
+        self.releaseTime = self.resetTime
+    }
+    
     var body: some View {
         TimelineView(.periodic(from: workoutManager.builder?.startDate ?? Date(), by: 1)) { _ in
             VStack {
@@ -44,22 +56,12 @@ struct WorkoutCounterView: View {
                 .padding([.top, .horizontal])
             }
         }
-        .onAppear {
-            workoutManager.startWorkout()
-            holdTime = Int(workout.holdTime)
-            releaseTime = resetTime
-        }
         .onReceive(timer) { _ in
-            if !isPaused {
-                if holding {
-                    decrementHoldTime()
-                } else {
-                    decrementReleaseTime()
-                }
+            if !isPaused && holding {
+                decrementHoldTime()
+            } else if !isPaused && !holding {
+                decrementReleaseTime()
             }
-        }
-        .onDisappear() {
-            workoutManager.endWorkout()
         }
     }
     

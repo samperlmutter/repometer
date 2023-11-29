@@ -20,8 +20,10 @@ struct WorkoutTabView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            WorkoutCounterView(workout: workout).tag(Tab.counter)
-            NowPlayingView().tag(Tab.nowPlaying)
+            WorkoutCounterView(workout: workout)
+                .tag(Tab.counter)
+            NowPlayingView()
+                .tag(Tab.nowPlaying)
         }
         .navigationTitle(workout.name)
         .navigationBarTitleDisplayMode(.inline)
@@ -29,6 +31,14 @@ struct WorkoutTabView: View {
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
         .onChange(of: isLuminanceReduced) { _ in
             displayCounterView()
+        }
+        .onAppear() {
+            workoutManager.startWorkout()
+            print("start workout")
+        }
+        .onDisappear() {
+            workoutManager.endWorkout()
+            print("end workout")
         }
     }
     

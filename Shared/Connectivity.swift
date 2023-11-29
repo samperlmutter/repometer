@@ -28,6 +28,9 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
+        #if DEBUG
+        self.workouts.append(Workout.example())
+        #endif
     }
 
     #if os(iOS)
