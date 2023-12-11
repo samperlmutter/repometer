@@ -12,20 +12,14 @@ struct WorkoutsView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    ForEach(connectivity.workouts) { workout in
-                        NavigationLink {
-                            WorkoutTabView(workout: workout)
-                        } label: {
-                            Text(workout.name)
-                                .font(.headline)
-                        }
-                    }
+        NavigationStack {
+            List {
+                ForEach(connectivity.workouts) { workout in
+                    WorkoutListItem(workout: workout)
+                        .listRowInsets(EdgeInsets())
                 }
-                .listStyle(.carousel)
             }
+            .listStyle(.carousel)
             .navigationTitle("Workouts")
         }
         .onAppear() {

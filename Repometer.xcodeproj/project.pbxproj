@@ -29,6 +29,7 @@
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
 		89313B5C2AD623D8004CBDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
+		8932D4AA2B2671FA000AF1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
 		894B5253298ECFCE00DA950A /* WorkoutCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */; };
 		894F3EBC29980B19000C9EE7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */; };
 		896501E62977213700D9E5C8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
@@ -37,6 +38,7 @@
 		8967FB4A297704C6008AE937 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 		899B92F92982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
 		899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
+		89C4168D2B214E050066D2FE /* WorkoutListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4168B2B214E050066D2FE /* WorkoutListItem.swift */; };
 		89C684CD2A14501300B6A448 /* CoreWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */; };
 		89C684CE2A14501300B6A448 /* CoreWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */; };
 		89D2F2AD29773BE50004D881 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */; };
@@ -147,6 +149,7 @@
 		8967FB4729770476008AE937 /* Repometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repometer.xcdatamodel; sourceTree = "<group>"; };
 		8967FB49297704C6008AE937 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		89C4168B2B214E050066D2FE /* WorkoutListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItem.swift; sourceTree = "<group>"; };
 		89C684C82A13E04A00B6A448 /* Repometer WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Repometer WatchKit App.entitlements"; sourceTree = "<group>"; };
 		89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreWorkoutData.swift; sourceTree = "<group>"; };
 		89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
@@ -234,7 +237,6 @@
 				892B58F529931CB600D5251A /* Repometer.entitlements */,
 				4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */,
 				4C1BA9C427BC4A5A004C3AEC /* WorkoutsView.swift */,
-				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
 				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
 				4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */,
 				4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */,
@@ -282,6 +284,7 @@
 				892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */,
 				4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */,
 				4C1BA9F527BC4A60004C3AEC /* WorkoutsView.swift */,
+				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
 				4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */,
 				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
 				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
@@ -322,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
+				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
 				8967FB49297704C6008AE937 /* DataController.swift */,
 				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
 				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
@@ -557,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1BAA0127BC4A62004C3AEC /* Preview Assets.xcassets in Resources */,
+				8932D4AA2B2671FA000AF1FB /* Assets.xcassets in Resources */,
 				4C1BA9FE27BC4A62004C3AEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +623,7 @@
 				4C1BA9F627BC4A60004C3AEC /* WorkoutsView.swift in Sources */,
 				4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */,
 				89C684CE2A14501300B6A448 /* CoreWorkoutData.swift in Sources */,
+				89C4168D2B214E050066D2FE /* WorkoutListItem.swift in Sources */,
 				89F0C32F299DBC4B00C3404E /* WorkoutTabView.swift in Sources */,
 				894F3EBC29980B19000C9EE7 /* WorkoutManager.swift in Sources */,
 				89D2F2AD29773BE50004D881 /* WorkoutDetailView.swift in Sources */,
@@ -733,11 +739,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -786,10 +794,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -807,8 +817,10 @@
 				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Repometer_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Repometer.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Repometer will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -822,7 +834,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -840,8 +852,10 @@
 				INFOPLIST_FILE = "Repometer WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Repometer WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Repometer_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Repometer.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Repometer will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -856,7 +870,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -882,7 +896,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -909,7 +923,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -930,9 +944,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -964,9 +977,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -991,7 +1003,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1012,7 +1024,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1033,7 +1045,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1053,7 +1065,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZT2V2847N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.samperlmutter.RepometerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1083,7 +1095,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer WatchKit Extension.appex/Repometer WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1105,7 +1117,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Repometer WatchKit Extension.appex/Repometer WatchKit Extension";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1124,7 +1136,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "Repometer WatchKit App";
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1144,7 +1156,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "Repometer WatchKit App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

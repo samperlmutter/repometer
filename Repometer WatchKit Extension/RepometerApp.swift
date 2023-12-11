@@ -12,13 +12,11 @@ struct RepometerApp: App {
     private var workoutManager = WorkoutManager()
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationView {
-                WorkoutsView()
-            }
-            .environmentObject(workoutManager)
-            .task {
-                Connectivity.shared.send(.syncCheck(Connectivity.shared.workouts.map { $0.id }))
-            }
+            WorkoutsView()
+                .environmentObject(workoutManager)
+                .task {
+                    Connectivity.shared.send(.syncCheck(Connectivity.shared.workouts.map { $0.id }))
+                }
         }
     }
 }

@@ -5,7 +5,7 @@
 	<key>NSHealthShareUsageDescription</key>
 	<string>Your workout related data will be used to display your saved workouts in Repometer.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Workouts tracked by Repometer will be saved to HealthKit.</string>
+	<string>Workouts tracked by Repometer will be saved in Health.</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
