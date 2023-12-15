@@ -26,7 +26,7 @@ struct WorkoutTabView: View {
                 .tag(Tab.nowPlaying)
         }
         .navigationBarHidden(selection == .nowPlaying)
-//        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden()
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
         .onChange(of: isLuminanceReduced) { _ in
             displayCounterView()
