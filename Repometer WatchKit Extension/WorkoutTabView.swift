@@ -25,9 +25,8 @@ struct WorkoutTabView: View {
             NowPlayingView()
                 .tag(Tab.nowPlaying)
         }
-        .navigationTitle(workout.name)
-        .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(selection == .nowPlaying)
+//        .navigationBarBackButtonHidden()
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
         .onChange(of: isLuminanceReduced) { _ in
             displayCounterView()
@@ -51,6 +50,8 @@ struct WorkoutTabView: View {
 
 struct WorkoutTabView_Previews: PreviewProvider {
     static var previews: some View {
+        let workoutManager = WorkoutManager()
         WorkoutTabView(workout: Workout.example())
+            .environmentObject(workoutManager)
     }
 }

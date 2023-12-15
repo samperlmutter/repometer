@@ -58,7 +58,9 @@ struct WorkoutListItem: View {
 
 struct WorkoutComponent_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutListItem(workout: Workout.example())
+        let workout = Workout.example()
+        workout.name = "anterior pelvic tilt"
+        return WorkoutListItem(workout: workout)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -38,6 +38,8 @@
 		8967FB4A297704C6008AE937 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967FB49297704C6008AE937 /* DataController.swift */; };
 		899B92F92982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
 		899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
+		89B2EB9B2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */; };
+		89B2EB9C2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */; };
 		89C4168D2B214E050066D2FE /* WorkoutListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4168B2B214E050066D2FE /* WorkoutListItem.swift */; };
 		89C684CD2A14501300B6A448 /* CoreWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */; };
 		89C684CE2A14501300B6A448 /* CoreWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */; };
@@ -149,6 +151,7 @@
 		8967FB4729770476008AE937 /* Repometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repometer.xcdatamodel; sourceTree = "<group>"; };
 		8967FB49297704C6008AE937 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCounter.swift; sourceTree = "<group>"; };
 		89C4168B2B214E050066D2FE /* WorkoutListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItem.swift; sourceTree = "<group>"; };
 		89C684C82A13E04A00B6A448 /* Repometer WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Repometer WatchKit App.entitlements"; sourceTree = "<group>"; };
 		89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreWorkoutData.swift; sourceTree = "<group>"; };
@@ -330,6 +333,7 @@
 				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
 				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
 				89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */,
+				89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -596,6 +600,7 @@
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
 				27BB64C30853BB6A90D2EB0E /* Connectivity.swift in Sources */,
 				8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */,
+				89B2EB9B2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +636,7 @@
 				27BB637566FD9A4E11768AA1 /* Connectivity.swift in Sources */,
 				894B5253298ECFCE00DA950A /* WorkoutCounterView.swift in Sources */,
 				896501E72977217C00D9E5C8 /* Repometer.xcdatamodeld in Sources */,
+				89B2EB9C2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */,
 				899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,13 +745,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -794,12 +800,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -834,7 +840,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -870,7 +876,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -896,7 +902,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -923,7 +929,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -945,7 +951,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -978,7 +984,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

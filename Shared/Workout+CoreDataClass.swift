@@ -59,15 +59,29 @@ public class Workout: NSManagedObject, Codable {
         example.name = "bridge"
         example.desc = "thrust upward. be the bridge between worlds"
         example.holdTime = 5
-        example.numReps = 10
-        example.numSets = 3
+        example.numReps = 2
+        example.numSets = 2
         
         return example
     }
     #endif
 }
 
+public enum WorkoutUpdate: Codable {
+    case delete(_ workoutId: UUID)
+    case update(_ workout: Workout)
+    case add(_ workout: Workout)
+    case sync(_ workouts: [Workout])
+    case syncCheck(_ workoutIds: [UUID])
+}
+
 extension Workout : Identifiable {}
+
+extension Array where Element == Workout {
+    func updateWorkouts(update: WorkoutUpdate) {
+        
+    }
+}
 
 
 public extension CodingUserInfoKey {

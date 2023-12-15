@@ -8,14 +8,6 @@
 import Foundation
 import WatchConnectivity
 
-public enum WorkoutUpdate: Codable {
-    case delete(_ workoutId: UUID)
-    case update(_ workout: Workout)
-    case add(_ workout: Workout)
-    case sync(_ workouts: [Workout])
-    case syncCheck(_ workoutIds: [UUID])
-}
-
 class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     static let shared = Connectivity()
     @Published var workouts: [Workout] = []
@@ -29,6 +21,8 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             session.activate()
         }
         #if DEBUG
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
         self.workouts.append(Workout.example())
         #endif
     }
