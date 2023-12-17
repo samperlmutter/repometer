@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ProgressCounter: View {
     @Binding var value: Int
+    @State private var lineate = true
     let total: Int
     let primaryColor: Color
     let secondaryColor: Color
     let textColor: Color
 
-    let strokeScale = 0.09
-    let calcLineWidth = { (g: GeometryProxy, scale: Double) -> Double in
+    private let strokeScale = 0.09
+    private let calcLineWidth = { (g: GeometryProxy, scale: Double) -> Double in
         return min(g.size.width, g.size.height) * scale
     }
 
@@ -31,7 +32,7 @@ struct ProgressCounter: View {
                         primaryColor,
                         style: StrokeStyle(lineWidth: calcLineWidth(g, strokeScale), lineCap: .round))
                     .rotationEffect(.degrees(-90))
-                    .animation(.easeInOut, value: value)
+                    .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.35), value: value)
                 Text("\(value == 1 && total == 1 ? 0 : value)")
                     .font(.system(size: calcLineWidth(g, 0.4)))
                     .foregroundStyle(textColor)
