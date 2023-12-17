@@ -29,27 +29,31 @@ enum CountDown: Int {
 
 struct WorkoutCounterView: View {
     let workout: Workout
+    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var workoutManager: WorkoutManager
-    @State private var time: Int
-    @State private var isPaused: Bool
-    @State private var currentSet: Int
-    @State private var currentRep: Int
-    @State private var countDownType: CountDown
+    @State private var time = CountDown.ready.rawValue
+    @State private var isPaused = true
+    @State private var currentSet = 0
+    @State private var currentRep = 0
+    @State private var countDownType = CountDown.ready
 
-    let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
-
-    init(workout: Workout) {
-        self.workout = workout
-        self.currentSet = 0
-        self.currentRep = 0
-        self.isPaused = false
-        self.countDownType = .ready
-        self.time = CountDown.ready.rawValue
-    }
+    private let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
 
     var body: some View {
         TimelineView(.periodic(from: workoutManager.builder?.startDate ?? Date(), by: 1)) { _ in
             GeometryReader { g in
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 15))
+                        .foregroundColor(.pink)
+                }
+                .clipShape(Circle())
+                .tint(.red)
+                .frame(width: 25, height: 25)
+                .position(x: 20, y: 10)
+
                 ProgressCounter(value: $time,
                                 total: countDownType.rawValue,
                                 primaryColor: Color("bluePrimaryColor"),

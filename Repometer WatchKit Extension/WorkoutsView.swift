@@ -20,6 +20,7 @@ struct WorkoutsView: View {
                 }
             }
             .listStyle(.carousel)
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Workouts")
         }
         .onAppear() {
