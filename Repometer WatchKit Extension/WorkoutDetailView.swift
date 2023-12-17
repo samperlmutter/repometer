@@ -10,15 +10,22 @@ import SwiftUI
 struct WorkoutDetailView: View {
     let workout: Workout
     var body: some View {
-        VStack {
-            Text(workout.desc ?? "")
-                .multilineTextAlignment(.leading)
-            Text("Hold for: \(workout.holdTime) sec")
-            Text("Number of sets: \(workout.numSets)")
-            Text("Number of reps: \(workout.numReps)")
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text(workout.name)
+                    .foregroundStyle(Color("bluePrimaryColor"))
+                    .font(.title3)
+                Text("\(workout.numSets) sets of \(workout.numReps)")
+                    .foregroundStyle(Color("orangePrimaryColor"))
+                    .font(.headline)
+                Text("Hold for \(workout.holdTime) seconds")
+                    .foregroundStyle(Color("orangePrimaryColor"))
+                    .font(.headline)
+                Text(workout.desc ?? "")
+                    .multilineTextAlignment(.leading)
+                    .font(.system(size: 15))
+            }
         }
-        .navigationTitle(workout.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

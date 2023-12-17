@@ -15,21 +15,25 @@ struct WorkoutTabView: View {
     @State private var selection: Tab = .counter
     
     enum Tab {
-        case counter, nowPlaying
+        case counter, nowPlaying, details
     }
     
     var body: some View {
         TabView(selection: $selection) {
+            WorkoutDetailView(workout: workout)
+                .tag(Tab.details)
             WorkoutCounterView(workout: workout)
                 .tag(Tab.counter)
             NowPlayingView()
                 .tag(Tab.nowPlaying)
         }
-        .navigationBarHidden(selection == .nowPlaying)
+        .navigationBarHidden(true)
         .navigationBarBackButtonHidden()
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
         .onChange(of: isLuminanceReduced) { _ in
-            displayCounterView()
+            withAnimation {
+                selection = .counter
+            }
         }
         .onAppear() {
             workoutManager.startWorkout()
@@ -38,12 +42,6 @@ struct WorkoutTabView: View {
         .onDisappear() {
             workoutManager.endWorkout()
             print("end workout")
-        }
-    }
-    
-    private func displayCounterView() {
-        withAnimation {
-            selection = .counter
         }
     }
 }
