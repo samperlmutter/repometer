@@ -53,17 +53,30 @@ public class Workout: NSManagedObject, Codable {
     }
 
     #if DEBUG
-    public static func example() -> Workout {
-        let example = Workout(context: DataController.shared.container.viewContext)
-        example.id = UUID()
-        example.name = "bridge"
-        example.desc = "thrust upward. be the bridge between worlds"
-        example.holdTime = 5
-        example.numReps = 2
-        example.numSets = 2
-        
-        return example
-    }
+        public static func example() -> Workout {
+            let context = DataController.shared.container.viewContext
+
+            let workouts = [
+                createWorkout(context: context, name: "Anterior Pelvic Tilt Correction", desc: "Lie on your back with knees bent and feet flat on the floor. Tighten your abdominal muscles and push your lower back into the floor. Hold for a few seconds, then relax. Repeat.", holdTime: 10, numReps: 5, numSets: 3),
+                createWorkout(context: context, name: "Bridge", desc: "Lie on your back with knees bent and feet flat. Lift your hips off the floor by pushing through your heels, forming a straight line from knees to shoulders. Hold the position, then slowly lower back down.", holdTime: 7, numReps: 8, numSets: 2),
+                createWorkout(context: context, name: "Leg Raise", desc: "Lie flat on your back with legs straight. Slowly raise your legs to a 90-degree angle, keeping them straight. Lower them back down without touching the floor. Repeat.", holdTime: 5, numReps: 10, numSets: 3),
+                createWorkout(context: context, name: "Shoulder Blade Squeeze", desc: "Sit or stand with your back straight. Squeeze your shoulder blades together as if trying to hold a pencil between them. Hold the squeeze, then release. Repeat.", holdTime: 6, numReps: 12, numSets: 2),
+                createWorkout(context: context, name: "Knee Extension", desc: "Sit on a chair with your feet flat on the floor. Extend one leg out in front of you until it is straight. Hold the position, then slowly lower your foot back to the floor. Alternate legs.", holdTime: 8, numReps: 6, numSets: 3)
+            ]
+
+            return workouts.randomElement() ?? workouts.first!
+        }
+
+        private static func createWorkout(context: NSManagedObjectContext, name: String, desc: String, holdTime: Int32, numReps: Int32, numSets: Int32) -> Workout {
+            let workout = Workout(context: context)
+            workout.id = UUID()
+            workout.name = name
+            workout.desc = desc
+            workout.holdTime = holdTime
+            workout.numReps = numReps
+            workout.numSets = numSets
+            return workout
+        }
     #endif
 }
 
