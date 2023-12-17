@@ -30,6 +30,8 @@ struct WorkoutsView: View {
 
 struct WorkoutsView_Previews: PreviewProvider {
     static var previews: some View {
+        let workoutManager = WorkoutManager()
         WorkoutsView()
+            .environmentObject(workoutManager)
     }
 }

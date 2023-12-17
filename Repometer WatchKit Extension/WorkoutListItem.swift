@@ -22,7 +22,7 @@ struct WorkoutListItem: View {
                     VStack(alignment: .leading) {
                         Button(action: { navigateToDetail = true }) {
                             Image(systemName: "ellipsis.circle.fill")
-                                .foregroundStyle(Color("bluePrimaryColor"), Color("blueSecondaryColor"))
+                                .foregroundStyle(Color("orangePrimaryColor"), Color("blueSecondaryColor"))
                                 .font(.system(size: 24))
                         }
                         .padding(.top, 12)
@@ -39,7 +39,7 @@ struct WorkoutListItem: View {
                     .padding(.leading, 12)
                     Spacer()
                     Image(systemName: "play.circle.fill")
-                        .foregroundStyle(Color("bluePrimaryColor"), Color("blueSecondaryColor"))
+                        .foregroundStyle(Color("orangePrimaryColor"), Color("blueSecondaryColor"))
                         .font(.system(size: 50))
                     .padding(.trailing, 12)
                 }
