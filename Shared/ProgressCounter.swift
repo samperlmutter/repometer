@@ -32,7 +32,7 @@ struct ProgressCounter: View {
                         primaryColor,
                         style: StrokeStyle(lineWidth: calcLineWidth(g, strokeScale), lineCap: .round))
                     .rotationEffect(.degrees(-90))
-                    .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.35), value: value)
+                    .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.30), value: value)
                 Text("\(value == 1 && total == 1 ? 0 : value)")
                     .font(.system(size: calcLineWidth(g, 0.4)))
                     .foregroundStyle(textColor)

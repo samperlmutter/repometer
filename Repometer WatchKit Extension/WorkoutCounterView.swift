@@ -98,20 +98,19 @@ struct WorkoutCounterView: View {
                     Button {
                         isPaused ? resumeWorkout() : pauseWorkout()
                     } label: {
-                        if isPaused {
-                            Image(systemName: "play")
-                                .font(.system(size: min(g.size.width, g.size.height) * 0.12))
-                                .foregroundColor(.green)
-                        } else {
-                            Image(systemName: "pause")
-                                .font(.system(size: min(g.size.width, g.size.height) * 0.12))
-                                .foregroundColor(.yellow)
-                        }
+                        Image(systemName: "playpause")
+                            .font(.system(size: min(g.size.width, g.size.height) * 0.12))
+                            .foregroundColor(!isPaused ? .green : .yellow)
+                            .hidden()
                     }
                     .clipShape(Circle())
                     .tint(isPaused ? .green : .yellow)
                     .frame(width: g.size.width * 0.17, height: g.size.height * 0.17)
                     .position(x: g.size.width / 2, y: g.size.height * 0.78)
+                    .overlay {
+                        let pos = CGPoint(x: g.size.width / 2, y: g.size.height * 0.78)
+                        PlayPauseIcon(center: pos, isPaused: $isPaused)
+                    }
                 }
             }
         }
@@ -156,12 +155,16 @@ struct WorkoutCounterView: View {
     }
 
     func pauseWorkout() {
-        isPaused = true
+        withAnimation {
+            isPaused = true
+        }
         workoutManager.pause()
     }
 
     func resumeWorkout() {
-        isPaused = false
+        withAnimation {
+            isPaused = false
+        }
         workoutManager.resume()
     }
 }
