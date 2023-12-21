@@ -294,13 +294,10 @@
 				892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */,
 				4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */,
 				4C1BA9F527BC4A60004C3AEC /* WorkoutsView.swift */,
-				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
 				4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */,
 				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
 				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
 				89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */,
-				894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */,
-				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
 				89F0C32E299DBC4B00C3404E /* WorkoutTabView.swift */,
 			);
 			path = "Repometer WatchKit Extension";
@@ -343,8 +340,11 @@
 			children = (
 				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
 				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
+				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
 				8967FB49297704C6008AE937 /* DataController.swift */,
+				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
 				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
+				894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */,
 				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
 				89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */,
 				89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */,
