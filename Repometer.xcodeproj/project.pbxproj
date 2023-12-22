@@ -21,7 +21,6 @@
 		4C1BA9EF27BC4A60004C3AEC /* Repometer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C1BA9F427BC4A60004C3AEC /* RepometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */; };
 		4C1BA9F627BC4A60004C3AEC /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BA9F527BC4A60004C3AEC /* WorkoutsView.swift */; };
-		4C1BA9FE27BC4A62004C3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */; };
 		4C1BAA0127BC4A62004C3AEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0027BC4A62004C3AEC /* Preview Assets.xcassets */; };
 		4C1BAA0D27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA0C27BC4A62004C3AEC /* Repometer_WatchKit_AppTests.swift */; };
 		4C1BAA1727BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1627BC4A62004C3AEC /* Repometer_WatchKit_AppUITests.swift */; };
@@ -143,7 +142,6 @@
 		4C1BA9EE27BC4A60004C3AEC /* Repometer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Repometer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepometerApp.swift; sourceTree = "<group>"; };
 		4C1BA9F527BC4A60004C3AEC /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
-		4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1BAA0027BC4A62004C3AEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C1BAA0227BC4A62004C3AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1BAA0827BC4A62004C3AEC /* Repometer WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repometer WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,10 +248,10 @@
 		4C1BA9C127BC4A5A004C3AEC /* Repometer */ = {
 			isa = PBXGroup;
 			children = (
+				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
 				892B58F529931CB600D5251A /* Repometer.entitlements */,
 				4C1BA9C227BC4A5A004C3AEC /* RepometerApp.swift */,
 				4C1BA9C427BC4A5A004C3AEC /* WorkoutsView.swift */,
-				4C1BA9C827BC4A5E004C3AEC /* Preview Content */,
 				4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */,
 				4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */,
 			);
@@ -297,12 +295,11 @@
 		4C1BA9F227BC4A60004C3AEC /* Repometer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
 				892B58F429931C9E00D5251A /* Repometer WatchKit Extension.entitlements */,
+				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
 				4C1BA9F327BC4A60004C3AEC /* RepometerApp.swift */,
 				4C1BA9F527BC4A60004C3AEC /* WorkoutsView.swift */,
-				4C1BA9FD27BC4A62004C3AEC /* Assets.xcassets */,
-				4C1BAA0227BC4A62004C3AEC /* Info.plist */,
-				4C1BA9FF27BC4A62004C3AEC /* Preview Content */,
 				89D2F2AC29773BE50004D881 /* WorkoutDetailView.swift */,
 				89F0C32E299DBC4B00C3404E /* WorkoutTabView.swift */,
 			);
@@ -334,6 +331,40 @@
 			path = "Repometer WatchKit AppUITests";
 			sourceTree = "<group>";
 		};
+		892855002B35EC7400116DE1 /* WorkoutCounter */ = {
+			isa = PBXGroup;
+			children = (
+				894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */,
+				89A970952B3531D500DBED6F /* WorkoutCounterViewModel.swift */,
+				89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */,
+			);
+			path = WorkoutCounter;
+			sourceTree = "<group>";
+		};
+		892855012B35EC9E00116DE1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
+				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
+				89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */,
+				8967FB49297704C6008AE937 /* DataController.swift */,
+				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
+				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		892855022B35ED3C00116DE1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
+				894A6AF52B32805000744256 /* TriPointLine.swift */,
+				894A6AF82B32957F00744256 /* PlayPauseIcon.swift */,
+				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		894A6AE82B32464600744256 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,19 +375,9 @@
 		894F3EBA29980647000C9EE7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8967FB4629770476008AE937 /* Repometer.xcdatamodeld */,
-				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
-				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
-				8967FB49297704C6008AE937 /* DataController.swift */,
-				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
-				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
-				894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */,
-				89A970952B3531D500DBED6F /* WorkoutCounterViewModel.swift */,
-				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
-				89C684CC2A14501300B6A448 /* CoreWorkoutData.swift */,
-				89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */,
-				894A6AF52B32805000744256 /* TriPointLine.swift */,
-				894A6AF82B32957F00744256 /* PlayPauseIcon.swift */,
+				892855012B35EC9E00116DE1 /* Data */,
+				892855002B35EC7400116DE1 /* WorkoutCounter */,
+				892855022B35ED3C00116DE1 /* Assets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -595,7 +616,6 @@
 			files = (
 				4C1BAA0127BC4A62004C3AEC /* Preview Assets.xcassets in Resources */,
 				8932D4AA2B2671FA000AF1FB /* Assets.xcassets in Resources */,
-				4C1BA9FE27BC4A62004C3AEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
