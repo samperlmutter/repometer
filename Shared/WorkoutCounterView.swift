@@ -68,6 +68,7 @@ struct WorkoutCounterView: View {
                             textColor: Color("orangePrimaryColor"))
             .overlay {
                 GeometryReader { g in
+                    #if os(watchOS)
                     Button {
                         dismiss()
                     } label: {
@@ -75,10 +76,12 @@ struct WorkoutCounterView: View {
                             .font(.system(size: 15))
                             .foregroundColor(.pink)
                     }
+                    .buttonStyle(.bordered)
                     .clipShape(Circle())
                     .tint(.red)
                     .frame(width: 25, height: 25)
                     .position(x: 20, y: 10)
+                    #endif
 
                     Text(counterVM.countDownType.toString)
                         .font(.system(size: min(g.size.width, g.size.height) * 0.15, weight: .bold))
@@ -123,6 +126,7 @@ struct WorkoutCounterView: View {
                             .foregroundColor(!counterVM.isPaused ? .green : .yellow)
                             .hidden()
                     }
+                    .buttonStyle(.bordered)
                     .clipShape(Circle())
                     .tint(counterVM.isPaused ? .green : .yellow)
                     .frame(width: g.size.width * 0.17, height: g.size.height * 0.17)

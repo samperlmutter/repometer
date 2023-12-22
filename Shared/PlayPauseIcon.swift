@@ -21,32 +21,37 @@ struct PlayPauseIcon: View {
 
     private let pausePoints: [[CGPoint]]
     private let playPoints: [[CGPoint]]
+    #if os(watchOS)
+    private let s = 1.0
+    #else
+    private let s = 2.0
+    #endif
 
     init(center: CGPoint, isPaused: Binding<Bool>) {
         self.center = center
         _isPaused = isPaused
         pausePoints = [
             [
-                CGPoint(x: center.x - 3, y: center.y - 7),
-                CGPoint(x: center.x - 3, y: center.y),
-                CGPoint(x: center.x - 3, y: center.y + 7),
+                CGPoint(x: center.x - (3 * s), y: center.y - (7 * s)),
+                CGPoint(x: center.x - (3 * s), y: center.y),
+                CGPoint(x: center.x - (3 * s), y: center.y + (7 * s)),
             ],
             [
-                CGPoint(x: center.x + 3, y: center.y - 7),
-                CGPoint(x: center.x + 3, y: center.y),
-                CGPoint(x: center.x + 3, y: center.y + 7),
+                CGPoint(x: center.x + (3 * s), y: center.y - (7 * s)),
+                CGPoint(x: center.x + (3 * s), y: center.y),
+                CGPoint(x: center.x + (3 * s), y: center.y + (7 * s)),
             ]
         ]
         playPoints = [
             [
-                CGPoint(x: center.x - 6, y: center.y - 7),
-                CGPoint(x: center.x - 6, y: center.y),
-                CGPoint(x: center.x - 6, y: center.y + 7),
+                CGPoint(x: center.x - (5 * s), y: center.y - (7 * s)),
+                CGPoint(x: center.x - (5 * s), y: center.y),
+                CGPoint(x: center.x - (5 * s), y: center.y + (7 * s)),
             ],
             [
-                CGPoint(x: center.x - 6, y: center.y - 7),
-                CGPoint(x: center.x + 6, y: center.y),
-                CGPoint(x: center.x - 6, y: center.y + 7),
+                CGPoint(x: center.x - (5 * s), y: center.y - (7 * s)),
+                CGPoint(x: center.x + (7 * s), y: center.y),
+                CGPoint(x: center.x - (5 * s), y: center.y + (7 * s)),
             ]
         ]
 
@@ -61,9 +66,9 @@ struct PlayPauseIcon: View {
     var body: some View {
         ZStack {
             TriPointLine(p1: p1, p2: p2, p3: p3)
-                .stroke(isPaused ? .green : .yellow, style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
+                .stroke(isPaused ? .green : .yellow, style: StrokeStyle(lineWidth: (1.5 * s), lineCap: .round, lineJoin: .round))
             TriPointLine(p1: p4, p2: p5, p3: p6)
-                .stroke(isPaused ? .green : .yellow, style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
+                .stroke(isPaused ? .green : .yellow, style: StrokeStyle(lineWidth: (1.5 * s), lineCap: .round, lineJoin: .round))
         }.onChange(of: isPaused) {
             withAnimation {
                 p1 = isPaused ? playPoints[0][0] : pausePoints[0][0]
