@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WorkoutsView: View {
     @ObservedObject var connectivity = Connectivity.shared
+    @State var showingCreateSheet = false
 
     var body: some View {
         NavigationStack {
@@ -25,6 +26,19 @@ struct WorkoutsView: View {
         }
         .navigationTitle("Workouts")
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Spacer()
+                Button(action: {
+                    showingCreateSheet.toggle()
+                }, label: {
+                    Image(systemName: "plus.circle.fill")
+                })
+                .sheet(isPresented: $showingCreateSheet, content: {
+                    CreateWorkoutView()
+                })
+            }
+        }
     }
 }
 

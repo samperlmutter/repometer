@@ -88,35 +88,33 @@ struct WorkoutCounterView: View {
                         .foregroundStyle(Color("orangePrimaryColor"))
                         .position(x: g.size.width / 2, y: g.size.height / 4)
 
-                    ZStack {
-                        ProgressCounter(value: $counterVM.currentSet,
-                                        total: Int(workout.numSets),
-                                        primaryColor: Color("orangePrimaryColor"),
-                                        secondaryColor: Color("orangeSecondaryColor"),
-                                        textColor: Color.white)
-                            .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
+                    ProgressCounter(value: $counterVM.currentSet,
+                                    total: Int(workout.numSets),
+                                    primaryColor: Color("orangePrimaryColor"),
+                                    secondaryColor: Color("orangeSecondaryColor"),
+                                    textColor: Color.white)
+                        .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
+                        .overlay(alignment: .bottom) {
+                            Text("Set")
+                                .font(.system(size: min(g.size.width, g.size.height) * 0.07))
+                                .offset(x: 0, y: min(g.size.width, g.size.height) * 0.08)
+                        }
+                        .padding(.leading, 10)
+                        .position(x: g.size.width / 4, y: g.size.height / 2)
 
-                        Text("Set")
-                            .font(.system(size: min(g.size.width, g.size.height) * 0.07))
-                            .padding(.top, 45)
-                    }
-                    .padding(.leading, 10)
-                    .position(x: g.size.width / 4, y: g.size.height / 2)
-
-                    ZStack {
-                        ProgressCounter(value: $counterVM.currentRep,
-                                        total: Int(workout.numReps),
-                                        primaryColor: Color("orangePrimaryColor"),
-                                        secondaryColor: Color("orangeSecondaryColor"),
-                                        textColor: Color.white)
-                            .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
-                        
-                        Text("Rep")
-                            .font(.system(size: min(g.size.width, g.size.height) * 0.07))
-                            .padding(.top, 45)
-                    }
-                    .padding(.trailing, 10)
-                    .position(x: g.size.width * 0.75, y: g.size.height / 2)
+                    ProgressCounter(value: $counterVM.currentRep,
+                                    total: Int(workout.numReps),
+                                    primaryColor: Color("orangePrimaryColor"),
+                                    secondaryColor: Color("orangeSecondaryColor"),
+                                    textColor: Color.white)
+                        .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
+                        .overlay(alignment: .bottom) {
+                            Text("Rep")
+                                .font(.system(size: min(g.size.width, g.size.height) * 0.07))
+                                .offset(x: 0, y: min(g.size.width, g.size.height) * 0.08)
+                        }
+                        .padding(.trailing, 10)
+                        .position(x: g.size.width * 0.75, y: g.size.height / 2)
 
                     Button {
                         counterVM.isPaused ? resumeWorkout() : pauseWorkout()

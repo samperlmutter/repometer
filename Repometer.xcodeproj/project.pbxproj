@@ -28,6 +28,8 @@
 		4C1BAA1927BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BAA1827BC4A62004C3AEC /* Repometer_WatchKit_AppUITestsLaunchTests.swift */; };
 		4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CACFF27BC8BB800B2B2BC /* WorkoutDetailView.swift */; };
 		4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CAD0127BC8FFC00B2B2BC /* CreateWorkoutView.swift */; };
+		89202FA22B35DA3000557B6B /* WorkoutCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */; };
+		89202FA32B35DA3F00557B6B /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */; };
 		89313B5C2AD623D8004CBDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
 		8932D4AA2B2671FA000AF1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */; };
 		894A6AF62B32805000744256 /* TriPointLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A6AF52B32805000744256 /* TriPointLine.swift */; };
@@ -44,7 +46,6 @@
 		899B92FA2982329C00080C4D /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */; };
 		89A970962B3531D500DBED6F /* WorkoutCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A970952B3531D500DBED6F /* WorkoutCounterViewModel.swift */; };
 		89A970972B3531D500DBED6F /* WorkoutCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A970952B3531D500DBED6F /* WorkoutCounterViewModel.swift */; };
-		89A970982B353A7E00DBED6F /* WorkoutCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */; };
 		89A9709A2B353ECB00DBED6F /* WorkoutListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4168B2B214E050066D2FE /* WorkoutListItem.swift */; };
 		89B2EB9B2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */; };
 		89B2EB9C2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B2EB9A2B2CAF05000C7C7F /* ProgressCounter.swift */; };
@@ -347,8 +348,8 @@
 				4C1BA9C627BC4A5E004C3AEC /* Assets.xcassets */,
 				89C4168B2B214E050066D2FE /* WorkoutListItem.swift */,
 				8967FB49297704C6008AE937 /* DataController.swift */,
-				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
 				27BB6D0C07F4CDD20F85522F /* Connectivity.swift */,
+				894F3EBB29980B19000C9EE7 /* WorkoutManager.swift */,
 				894B5252298ECFCE00DA950A /* WorkoutCounterView.swift */,
 				89A970952B3531D500DBED6F /* WorkoutCounterViewModel.swift */,
 				899B92F72982329C00080C4D /* Workout+CoreDataClass.swift */,
@@ -620,15 +621,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				894A6AF62B32805000744256 /* TriPointLine.swift in Sources */,
+				89202FA22B35DA3000557B6B /* WorkoutCounterView.swift in Sources */,
 				8967FB4A297704C6008AE937 /* DataController.swift in Sources */,
 				89A970962B3531D500DBED6F /* WorkoutCounterViewModel.swift in Sources */,
 				4C9CAD0227BC8FFD00B2B2BC /* CreateWorkoutView.swift in Sources */,
+				89202FA32B35DA3F00557B6B /* WorkoutManager.swift in Sources */,
 				4C1BA9C527BC4A5A004C3AEC /* WorkoutsView.swift in Sources */,
 				4C9CAD0027BC8BB800B2B2BC /* WorkoutDetailView.swift in Sources */,
 				899B92F92982329C00080C4D /* Workout+CoreDataClass.swift in Sources */,
 				89C684CD2A14501300B6A448 /* CoreWorkoutData.swift in Sources */,
 				4C1BA9C327BC4A5A004C3AEC /* RepometerApp.swift in Sources */,
-				89A970982B353A7E00DBED6F /* WorkoutCounterView.swift in Sources */,
 				27BB64C30853BB6A90D2EB0E /* Connectivity.swift in Sources */,
 				8967FB4829770476008AE937 /* Repometer.xcdatamodeld in Sources */,
 				89B2EB9B2B2CAF05000C7C7F /* ProgressCounter.swift in Sources */,

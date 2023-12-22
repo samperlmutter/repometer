@@ -11,7 +11,6 @@ import HealthKit
 public class WorkoutManager: NSObject, ObservableObject {
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession?
-    var builder: HKLiveWorkoutBuilder?
     
     func requestAuthorization() {
         // The quantity type to write to the health store.
@@ -34,6 +33,8 @@ public class WorkoutManager: NSObject, ObservableObject {
         }
     }
     
+    #if os(watchOS)
+    var builder: HKLiveWorkoutBuilder?
     func startWorkout() {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = .other
@@ -64,6 +65,12 @@ public class WorkoutManager: NSObject, ObservableObject {
         }
     }
     
+    func resetWorkout() {
+        builder = nil
+        session = nil
+    }
+    #endif
+    
 // MARK: - Session State Control
 
     // The app's workout state.
@@ -88,13 +95,9 @@ public class WorkoutManager: NSObject, ObservableObject {
     func endWorkout() {
         session?.end()
     }
-
-    func resetWorkout() {
-        builder = nil
-        session = nil
-    }
 }
 
+#if os(watchOS)
 // MARK: - HKWorkoutSessionDelegate
 extension WorkoutManager: HKWorkoutSessionDelegate {
     public func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
@@ -139,3 +142,4 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
         }
     }
 }
+#endif

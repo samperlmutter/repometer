@@ -58,8 +58,8 @@ class WorkoutCounterViewModel: ObservableObject {
                 countDownType = .hold
             case .ready:
                 countDownType = .hold
-                    currentSet += 1
-                    currentRep = 0
+                currentSet += 1
+                currentRep = 0
             case .done:
                 break
             }
