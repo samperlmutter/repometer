@@ -7,36 +7,11 @@
 
 import SwiftUI
 
-enum CountDown: Int {
-    case hold = 5
-    case release = 2
-    case ready = 3
-    case done = 1
-
-    var toString: String {
-        switch self {
-        case .hold:
-            return "Hold"
-        case .release:
-            return "Release"
-        case .ready:
-            return "Ready"
-        case .done:
-            return "Done!"
-        }
-    }
-}
-
 struct WorkoutCounterView: View {
     let workout: Workout
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject var workoutManager: WorkoutManager
-    @State private var time = CountDown.ready.rawValue
-    @State private var isPaused = true
-    @State private var currentSet = 0
-    @State private var currentRep = 0
-    @State private var countDownType = CountDown.ready
+    @ObservedObject var counterVM: WorkoutCounterViewModel
 
     private let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     private let withActiveAnimation: (ScenePhase, () -> Void) -> Void = { scenePhase, animate in
@@ -49,34 +24,69 @@ struct WorkoutCounterView: View {
         }
     }
 
-    var body: some View {
-        TimelineView(.periodic(from: workoutManager.builder?.startDate ?? Date(), by: 1)) { _ in
-            GeometryReader { g in
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.system(size: 15))
-                        .foregroundColor(.pink)
-                }
-                .clipShape(Circle())
-                .tint(.red)
-                .frame(width: 25, height: 25)
-                .position(x: 20, y: 10)
+    #if os(watchOS)
+    @EnvironmentObject var workoutManager: WorkoutManager
+    func pauseWorkout() {
+        withAnimation {
+            counterVM.isPaused = true
+        }
+        workoutManager.pause()
+    }
 
-                ProgressCounter(value: $time,
-                                total: countDownType.rawValue,
-                                primaryColor: Color("bluePrimaryColor"),
-                                secondaryColor: Color("blueSecondaryColor"),
-                                textColor: Color("orangePrimaryColor"))
-                .overlay {
-                    Text(countDownType.toString)
+    func resumeWorkout() {
+        withAnimation {
+            counterVM.isPaused = false
+        }
+        workoutManager.resume()
+    }
+    #else
+    func pauseWorkout() {
+        withAnimation {
+            counterVM.isPaused = true
+        }
+    }
+
+    func resumeWorkout() {
+        withAnimation {
+            counterVM.isPaused = false
+        }
+    }
+    #endif
+    
+    init(workout: Workout) {
+        self.workout = workout
+        self.counterVM = WorkoutCounterViewModel(workout)
+    }
+
+    var body: some View {
+        TimelineView(.periodic(from: .now, by: 1)) { _ in
+
+            ProgressCounter(value: $counterVM.time,
+                            total: counterVM.countDownType.rawValue,
+                            primaryColor: Color("bluePrimaryColor"),
+                            secondaryColor: Color("blueSecondaryColor"),
+                            textColor: Color("orangePrimaryColor"))
+            .overlay {
+                GeometryReader { g in
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 15))
+                            .foregroundColor(.pink)
+                    }
+                    .clipShape(Circle())
+                    .tint(.red)
+                    .frame(width: 25, height: 25)
+                    .position(x: 20, y: 10)
+
+                    Text(counterVM.countDownType.toString)
                         .font(.system(size: min(g.size.width, g.size.height) * 0.15, weight: .bold))
                         .foregroundStyle(Color("orangePrimaryColor"))
                         .position(x: g.size.width / 2, y: g.size.height / 4)
 
                     ZStack {
-                        ProgressCounter(value: $currentSet,
+                        ProgressCounter(value: $counterVM.currentSet,
                                         total: Int(workout.numSets),
                                         primaryColor: Color("orangePrimaryColor"),
                                         secondaryColor: Color("orangeSecondaryColor"),
@@ -91,7 +101,7 @@ struct WorkoutCounterView: View {
                     .position(x: g.size.width / 4, y: g.size.height / 2)
 
                     ZStack {
-                        ProgressCounter(value: $currentRep,
+                        ProgressCounter(value: $counterVM.currentRep,
                                         total: Int(workout.numReps),
                                         primaryColor: Color("orangePrimaryColor"),
                                         secondaryColor: Color("orangeSecondaryColor"),
@@ -106,83 +116,53 @@ struct WorkoutCounterView: View {
                     .position(x: g.size.width * 0.75, y: g.size.height / 2)
 
                     Button {
-                        isPaused ? resumeWorkout() : pauseWorkout()
+                        counterVM.isPaused ? resumeWorkout() : pauseWorkout()
                     } label: {
                         Image(systemName: "playpause")
                             .font(.system(size: min(g.size.width, g.size.height) * 0.12))
-                            .foregroundColor(!isPaused ? .green : .yellow)
+                            .foregroundColor(!counterVM.isPaused ? .green : .yellow)
                             .hidden()
                     }
                     .clipShape(Circle())
-                    .tint(isPaused ? .green : .yellow)
+                    .tint(counterVM.isPaused ? .green : .yellow)
                     .frame(width: g.size.width * 0.17, height: g.size.height * 0.17)
                     .position(x: g.size.width / 2, y: g.size.height * 0.78)
                     .overlay {
                         let pos = CGPoint(x: g.size.width / 2, y: g.size.height * 0.78)
-                        PlayPauseIcon(center: pos, isPaused: $isPaused)
+                        PlayPauseIcon(center: pos, isPaused: $counterVM.isPaused)
                     }
                 }
+                .scaledToFit()
             }
         }
         .onReceive(timer) { _ in
-            if !isPaused {
-                withActiveAnimation(scenePhase) {
-                    time -= 1
-                }
-            }
-
-            if time < 0 {
-                switch countDownType {
-                case .hold:
-                    WKInterfaceDevice.current().play(.stop)
-                    countDownType = .release
-                    withActiveAnimation(scenePhase) {
-                        currentRep += 1
-                    }
-                case .release:
-                    WKInterfaceDevice.current().play(.success)
-                    countDownType = .hold
-                case .ready:
-                    WKInterfaceDevice.current().play(.success)
-                    countDownType = .hold
-                        withActiveAnimation(scenePhase) {
-                            currentSet += 1
-                            currentRep = 0
-                        }
-                case .done:
-                    break
-                }
-
-                if currentRep == workout.numReps {
-                    WKInterfaceDevice.current().play(.retry)
-                    countDownType = currentSet == workout.numSets ? .done : .ready
-                    pauseWorkout()
-                }
-
-                time = countDownType.rawValue
+            withActiveAnimation(scenePhase) {
+                counterVM.tick()
             }
         }
-    }
-
-    func pauseWorkout() {
-        withAnimation {
-            isPaused = true
+        .onChange(of: counterVM.countDownType) {
+            #if os(watchOS)
+            switch counterVM.countDownType {
+            case .hold:
+                WKInterfaceDevice.current().play(.success)
+            case .release:
+                WKInterfaceDevice.current().play(.stop)
+            case .ready, .done:
+                WKInterfaceDevice.current().play(.retry)
+            }
+            #endif
         }
-        workoutManager.pause()
-    }
-
-    func resumeWorkout() {
-        withAnimation {
-            isPaused = false
-        }
-        workoutManager.resume()
     }
 }
 
 struct WorkoutCounterView_Previews: PreviewProvider {
     static var previews: some View {
+        #if os(watchOS)
         let workoutManager = WorkoutManager()
         WorkoutCounterView(workout: Workout.example())
             .environmentObject(workoutManager)
+        #else
+        WorkoutCounterView(workout: Workout.example())
+        #endif
     }
 }

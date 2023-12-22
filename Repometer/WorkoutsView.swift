@@ -8,42 +8,23 @@
 import SwiftUI
 
 struct WorkoutsView: View {
-    @ObservedObject private var cwd = CoreWorkoutData.shared
-    @State var showingCreateSheet = false
-    @StateObject var connectivity = Connectivity()
+    @ObservedObject var connectivity = Connectivity.shared
 
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    ForEach(cwd.workouts) { workout in
-                        NavigationLink {
-                            WorkoutDetailView(workout: workout)
-                        } label: {
-                            Text(workout.name)
-                                    .font(.headline)
-                        }
-                    }
-                    .onDelete { i in
-                        cwd.deleteWorkout(cwd.workouts[i.first!])
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    ForEach(connectivity.workouts) { workout in
+                        WorkoutListItem(workout: workout)
+                            .padding([.leading, .trailing], 16)
+                            .padding(.bottom, 5)
                     }
                 }
             }
-            .navigationTitle("Workouts")
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Spacer()
-                    Button(action: {
-                        showingCreateSheet.toggle()
-                    }, label: {
-                        Image(systemName: "square.and.pencil")
-                    })
-                    .sheet(isPresented: $showingCreateSheet, content: {
-                        CreateWorkoutView()
-                    })
-                }
-            }
+            .padding(.top, 16)
         }
+        .navigationTitle("Workouts")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

@@ -17,6 +17,7 @@ struct ProgressCounter: View {
     @Environment(\.scenePhase) private var scenePhase
     @Binding var value: Int
     @State private var lineate = true
+    @State private var dimmed = false
     let total: Int
     let primaryColor: Color
     let secondaryColor: Color
@@ -40,7 +41,12 @@ struct ProgressCounter: View {
                         style: StrokeStyle(lineWidth: calcLineWidth(g, strokeScale), lineCap: .round))
                     .rotationEffect(.degrees(-90))
                     .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.30), value: value)
-                    .hidden(scenePhase != .active)
+                    .hidden(dimmed)
+                    .onChange(of: scenePhase) {
+                        withAnimation {
+                            dimmed = scenePhase != .active
+                        }
+                    }
                 Text("\(value == 1 && total == 1 ? 0 : value)")
                     .font(.system(size: calcLineWidth(g, 0.4)))
                     .foregroundStyle(textColor)
