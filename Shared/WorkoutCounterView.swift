@@ -29,6 +29,7 @@ enum CountDown: Int {
 
 struct WorkoutCounterView: View {
     let workout: Workout
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var workoutManager: WorkoutManager
     @State private var time = CountDown.ready.rawValue
@@ -38,6 +39,15 @@ struct WorkoutCounterView: View {
     @State private var countDownType = CountDown.ready
 
     private let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
+    private let withActiveAnimation: (ScenePhase, () -> Void) -> Void = { scenePhase, animate in
+        if scenePhase == .active {
+            withAnimation {
+                animate()
+            }
+        } else {
+            animate()
+        }
+    }
 
     var body: some View {
         TimelineView(.periodic(from: workoutManager.builder?.startDate ?? Date(), by: 1)) { _ in
@@ -116,7 +126,7 @@ struct WorkoutCounterView: View {
         }
         .onReceive(timer) { _ in
             if !isPaused {
-                withAnimation {
+                withActiveAnimation(scenePhase) {
                     time -= 1
                 }
             }
@@ -126,7 +136,7 @@ struct WorkoutCounterView: View {
                 case .hold:
                     WKInterfaceDevice.current().play(.stop)
                     countDownType = .release
-                    withAnimation {
+                    withActiveAnimation(scenePhase) {
                         currentRep += 1
                     }
                 case .release:
@@ -135,7 +145,7 @@ struct WorkoutCounterView: View {
                 case .ready:
                     WKInterfaceDevice.current().play(.success)
                     countDownType = .hold
-                        withAnimation {
+                        withActiveAnimation(scenePhase) {
                             currentSet += 1
                             currentRep = 0
                         }

@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+extension View {
+    func hidden(_ shouldHide: Bool) -> some View {
+        opacity(shouldHide ? 0 : 1)
+    }
+}
+
 struct ProgressCounter: View {
+    @Environment(\.scenePhase) private var scenePhase
     @Binding var value: Int
     @State private var lineate = true
     let total: Int
@@ -23,8 +30,8 @@ struct ProgressCounter: View {
     var body: some View {
         GeometryReader{ g in
             ZStack {
-                Circle()
-                    .strokeBorder(secondaryColor, lineWidth: calcLineWidth(g, strokeScale))
+            Circle()
+                .strokeBorder(secondaryColor, lineWidth: calcLineWidth(g, strokeScale))
                 Circle()
                     .inset(by: calcLineWidth(g, strokeScale / 2))
                     .trim(from: 0, to: Double(value) / Double(total))
@@ -33,6 +40,7 @@ struct ProgressCounter: View {
                         style: StrokeStyle(lineWidth: calcLineWidth(g, strokeScale), lineCap: .round))
                     .rotationEffect(.degrees(-90))
                     .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.30), value: value)
+                    .hidden(scenePhase != .active)
                 Text("\(value == 1 && total == 1 ? 0 : value)")
                     .font(.system(size: calcLineWidth(g, 0.4)))
                     .foregroundStyle(textColor)
