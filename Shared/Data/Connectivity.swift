@@ -24,6 +24,14 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         self.workouts.append(Workout.example())
         self.workouts.append(Workout.example())
         self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example())
         #endif
     }
 
