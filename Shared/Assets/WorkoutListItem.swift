@@ -52,9 +52,9 @@ struct WorkoutListItem: View {
             }
             .navigationDestination(isPresented: $navigateToCounter) {
                 #if os(watchOS)
-                WorkoutTabView(workout: workout)
+                WorkoutTabView(counterVM: WorkoutCounterViewModel(workout))
                 #else
-                WorkoutCounterView(workout: workout)
+                WorkoutCounterView(counterVM: WorkoutCounterViewModel(workout))
                 #endif
             }
     }

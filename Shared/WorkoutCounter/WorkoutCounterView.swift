@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WorkoutCounterView: View {
-    let workout: Workout
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var counterVM: WorkoutCounterViewModel
@@ -52,11 +51,6 @@ struct WorkoutCounterView: View {
         }
     }
     #endif
-    
-    init(workout: Workout) {
-        self.workout = workout
-        self.counterVM = WorkoutCounterViewModel(workout)
-    }
 
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { _ in
@@ -89,7 +83,7 @@ struct WorkoutCounterView: View {
                         .position(x: g.size.width / 2, y: g.size.height / 4)
 
                     ProgressCounter(value: $counterVM.currentSet,
-                                    total: Int(workout.numSets),
+                                    total: Int(counterVM.workout.numSets),
                                     primaryColor: Color("orangePrimaryColor"),
                                     secondaryColor: Color("orangeSecondaryColor"),
                                     textColor: Color.white)
@@ -103,7 +97,7 @@ struct WorkoutCounterView: View {
                         .position(x: g.size.width / 4, y: g.size.height / 2)
 
                     ProgressCounter(value: $counterVM.currentRep,
-                                    total: Int(workout.numReps),
+                                    total: Int(counterVM.workout.numReps),
                                     primaryColor: Color("orangePrimaryColor"),
                                     secondaryColor: Color("orangeSecondaryColor"),
                                     textColor: Color.white)
@@ -161,10 +155,10 @@ struct WorkoutCounterView_Previews: PreviewProvider {
     static var previews: some View {
         #if os(watchOS)
         let workoutManager = WorkoutManager()
-        WorkoutCounterView(workout: Workout.example())
+        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example()))
             .environmentObject(workoutManager)
         #else
-        WorkoutCounterView(workout: Workout.example())
+        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example()))
         #endif
     }
 }

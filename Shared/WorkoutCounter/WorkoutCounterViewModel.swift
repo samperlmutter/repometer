@@ -28,7 +28,7 @@ public enum CountDown: Int {
 }
 
 class WorkoutCounterViewModel: ObservableObject {
-    private let workout: Workout
+    let workout: Workout
     @Published var time: Int
     @Published var isPaused: Bool
     @Published var currentSet: Int

@@ -9,7 +9,7 @@ import SwiftUI
 import WatchKit
 
 struct WorkoutTabView: View {
-    let workout: Workout
+    let counterVM: WorkoutCounterViewModel
     @EnvironmentObject var workoutManager: WorkoutManager
     @Environment(\.isLuminanceReduced) var isLuminanceReduced
     @State private var selection: Tab = .counter
@@ -17,12 +17,12 @@ struct WorkoutTabView: View {
     enum Tab {
         case counter, nowPlaying, details
     }
-    
+
     var body: some View {
         TabView(selection: $selection) {
-            WorkoutDetailView(workout: workout)
+            WorkoutDetailView(workout: counterVM.workout)
                 .tag(Tab.details)
-            WorkoutCounterView(workout: workout)
+            WorkoutCounterView(counterVM: counterVM)
                 .tag(Tab.counter)
             NowPlayingView()
                 .tag(Tab.nowPlaying)
@@ -48,7 +48,7 @@ struct WorkoutTabView: View {
 struct WorkoutTabView_Previews: PreviewProvider {
     static var previews: some View {
         let workoutManager = WorkoutManager()
-        WorkoutTabView(workout: Workout.example())
+        WorkoutTabView(counterVM: WorkoutCounterViewModel(Workout.example()))
             .environmentObject(workoutManager)
     }
 }
