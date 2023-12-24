@@ -22,10 +22,10 @@ struct WorkoutsView: View {
                     }
                 }
             }
+            .navigationTitle("Workouts")
+            .navigationBarTitleDisplayMode(.large)
             .padding(.top, 16)
         }
-        .navigationTitle("Workouts")
-        .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                 Spacer()
