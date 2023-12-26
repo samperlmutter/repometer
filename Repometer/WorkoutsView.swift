@@ -24,15 +24,13 @@ struct WorkoutsView: View {
             }
             .navigationTitle("Workouts")
             .navigationBarTitleDisplayMode(.large)
-            .padding(.top, 16)
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
-                Spacer()
+            .overlay(alignment: .bottomTrailing) {
                 Button(action: {
                     showingCreateSheet.toggle()
                 }, label: {
                     Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 75))
+                        .foregroundStyle(Color("orangePrimaryColor"), Color("bluePrimaryColor"))
                 })
                 .sheet(isPresented: $showingCreateSheet, content: {
                     CreateWorkoutView()
