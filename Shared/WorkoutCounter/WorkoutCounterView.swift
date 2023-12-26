@@ -26,7 +26,9 @@ struct WorkoutCounterView: View {
     }
 
     public func pauseWorkout() {
-        counterVM.isPaused = true
+        withAnimation {
+            counterVM.isPaused = true
+        }
 
         #if os(watchOS)
         workoutManager.pause()
@@ -34,7 +36,9 @@ struct WorkoutCounterView: View {
     }
 
     public func resumeWorkout() {
-        counterVM.isPaused = false
+        withAnimation {
+            counterVM.isPaused = false
+        }
 
         #if os(watchOS)
         workoutManager.resume()
