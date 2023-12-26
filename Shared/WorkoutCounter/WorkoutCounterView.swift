@@ -59,7 +59,7 @@ struct WorkoutCounterView: View {
                                         total: Int(counterVM.workout.numSets),
                                         primaryColor: Color("orangePrimaryColor"),
                                         secondaryColor: Color("orangeSecondaryColor"),
-                                        textColor: Color.white)
+                                        textColor: Color.primary)
                             .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
                             .overlay(alignment: .bottom) {
                                 Text("Set")
@@ -73,7 +73,7 @@ struct WorkoutCounterView: View {
                                         total: Int(counterVM.workout.numReps),
                                         primaryColor: Color("orangePrimaryColor"),
                                         secondaryColor: Color("orangeSecondaryColor"),
-                                        textColor: Color.white)
+                                        textColor: Color.primary)
                             .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
                             .overlay(alignment: .bottom) {
                                 Text("Rep")
