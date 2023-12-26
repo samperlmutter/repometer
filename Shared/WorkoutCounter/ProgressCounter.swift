@@ -15,7 +15,7 @@ extension View {
 
 struct ProgressCounter: View {
     @Environment(\.scenePhase) private var scenePhase
-    @Binding var value: Int
+    @Binding var value: Double
     @State private var lineate = true
     @State private var dimmed = false
     let total: Int
@@ -31,8 +31,8 @@ struct ProgressCounter: View {
     var body: some View {
         GeometryReader{ g in
             ZStack {
-            Circle()
-                .strokeBorder(secondaryColor, lineWidth: calcLineWidth(g, strokeScale))
+                Circle()
+                    .strokeBorder(secondaryColor, lineWidth: calcLineWidth(g, strokeScale))
                 Circle()
                     .inset(by: calcLineWidth(g, strokeScale / 2))
                     .trim(from: 0, to: Double(value) / Double(total))
@@ -40,14 +40,14 @@ struct ProgressCounter: View {
                         primaryColor,
                         style: StrokeStyle(lineWidth: calcLineWidth(g, strokeScale), lineCap: .round))
                     .rotationEffect(.degrees(-90))
-                    .animation(lineate && value != total ? .linear(duration: 1) : .easeInOut(duration: 0.30), value: value)
+                    .animation(lineate && Int(value) != total ? .linear : .easeInOut(duration: 0.30), value: value)
                     .hidden(dimmed)
                     .onChange(of: scenePhase) {
                         withAnimation {
                             dimmed = scenePhase != .active
                         }
                     }
-                Text("\(value == 1 && total == 1 ? 0 : value)")
+                Text("\(value == 1 && total == 1 ? 0 : value, specifier: "%.0f")")
                     .font(.system(size: calcLineWidth(g, 0.4)))
                     .foregroundStyle(textColor)
                     .contentTransition(.numericText(value: Double(value)))
@@ -59,7 +59,7 @@ struct ProgressCounter: View {
 
 struct ProgressCounter_Previews: PreviewProvider {
     static var previews: some View {
-        @State var value = 3
+        @State var value = 3.0
         return ProgressCounter(value: $value,
                                total: 10,
                                primaryColor: Color("bluePrimaryColor"),

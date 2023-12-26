@@ -29,24 +29,24 @@ public enum CountDown: Int {
 
 class WorkoutCounterViewModel: ObservableObject {
     let workout: Workout
-    @Published var time: Int
+    @Published var time: Double
     @Published var isPaused: Bool
-    @Published var currentSet: Int
-    @Published var currentRep: Int
+    @Published var currentSet: Double
+    @Published var currentRep: Double
     @Published var countDownType: CountDown
     
     init(_ workout: Workout) {
         self.workout = workout
-        self.time = CountDown.ready.rawValue
+        self.time = Double(CountDown.ready.rawValue)
         self.isPaused = true
-        self.currentSet = 0
-        self.currentRep = 0
+        self.currentSet = 0.0
+        self.currentRep = 0.0
         self.countDownType = CountDown.ready
     }
 
     public func tick() {
         if !isPaused {
-            time -= 1
+            time -= 0.0625
         }
 
         if time < 0 {
@@ -64,12 +64,12 @@ class WorkoutCounterViewModel: ObservableObject {
                 break
             }
 
-            if currentRep == workout.numReps {
-                countDownType = currentSet == workout.numSets ? .done : .ready
+            if Int(currentRep) == workout.numReps {
+                countDownType = Int(currentSet) == workout.numSets ? .done : .ready
                 isPaused = true
             }
 
-            time = countDownType.rawValue
+            time = Double(countDownType.rawValue)
         }
     }
 }

@@ -54,7 +54,7 @@ struct WorkoutListItem: View {
                 #if os(watchOS)
                 WorkoutTabView(counterVM: WorkoutCounterViewModel(workout))
                 #else
-                WorkoutCounterView(counterVM: WorkoutCounterViewModel(workout))
+                WorkoutCounterInterfaceView(counterVM: WorkoutCounterViewModel(workout))
                 #endif
             }
     }

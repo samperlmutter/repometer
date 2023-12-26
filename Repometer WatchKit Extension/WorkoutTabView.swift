@@ -22,7 +22,7 @@ struct WorkoutTabView: View {
         TabView(selection: $selection) {
             WorkoutDetailView(workout: counterVM.workout)
                 .tag(Tab.details)
-            WorkoutCounterView(counterVM: counterVM)
+            WorkoutCounterInterfaceView(counterVM: counterVM)
                 .tag(Tab.counter)
             NowPlayingView()
                 .tag(Tab.nowPlaying)

@@ -22,9 +22,9 @@ struct PlayPauseIcon: View {
     private let pausePoints: [[CGPoint]]
     private let playPoints: [[CGPoint]]
     #if os(watchOS)
-    private let s = 1.0
+    private let s = 0.8
     #else
-    private let s = 2.0
+    private let s = 3.2
     #endif
 
     init(center: CGPoint, isPaused: Binding<Bool>) {
