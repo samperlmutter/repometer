@@ -12,7 +12,7 @@ struct WorkoutCounterView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     #endif
     @Environment(\.scenePhase) private var scenePhase
-    @ObservedObject var counterVM: WorkoutCounterViewModel
+    @StateObject var counterVM: WorkoutCounterViewModel
 
     private let timer = Timer.publish(every: 0.0625, on: .main, in: .default).autoconnect()
     private let withActiveAnimation: (ScenePhase, () -> Void) -> Void = { scenePhase, animate in

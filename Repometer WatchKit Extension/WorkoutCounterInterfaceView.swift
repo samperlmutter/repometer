@@ -11,7 +11,7 @@ import SwiftUI
 struct WorkoutCounterInterfaceView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var workoutManager: WorkoutManager
-    @ObservedObject var counterVM: WorkoutCounterViewModel
+    @StateObject var counterVM: WorkoutCounterViewModel
 
     var body: some View {
         ZStack {
