@@ -20,10 +20,21 @@ struct WorkoutCounterInterfaceView: View {
                 .font(.largeTitle)
                 .bold()
 
-            Text("\(counterVM.workout.numSets) sets of \(counterVM.workout.numReps)")
-                .foregroundStyle(.orangePrimary)
-                .font(.title2)
-                .bold()
+                Text("\(counterVM.workout.numSets) sets of \(counterVM.workout.numReps)")
+                    .foregroundStyle(.orangePrimary)
+                    .font(.title2)
+                    .bold()
+                    .overlay(alignment: .trailing) {
+                        Button {
+                            withAnimation {
+                                counterVM.showDescription.toggle()
+                            }
+                        } label: {
+                            Image(systemName: "info.circle.fill")
+                                .foregroundStyle(.gray)
+                        }
+                        .offset(x: 25, y: 0)
+                    }
 
             Spacer()
 
@@ -34,9 +45,11 @@ struct WorkoutCounterInterfaceView: View {
             Spacer()
 
             Text(counterVM.workout.desc ?? "")
-            .multilineTextAlignment(.leading)
-            .font(.headline)
-            .padding([.trailing, .leading], 10)
+                .multilineTextAlignment(.leading)
+                .font(.headline)
+                .padding([.trailing, .leading], 10)
+                .hidden(!counterVM.showDescription)
+
             Spacer()
 
             HStack {

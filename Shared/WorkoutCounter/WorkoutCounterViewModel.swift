@@ -34,6 +34,7 @@ class WorkoutCounterViewModel: ObservableObject {
     @Published var currentSet: Double
     @Published var currentRep: Double
     @Published var countDownType: CountDown
+    @Published var showDescription: Bool
     
     init(_ workout: Workout) {
         self.workout = workout
@@ -42,6 +43,7 @@ class WorkoutCounterViewModel: ObservableObject {
         self.currentSet = 0.0
         self.currentRep = 0.0
         self.countDownType = CountDown.ready
+        self.showDescription = false
     }
 
     public func tick() {
