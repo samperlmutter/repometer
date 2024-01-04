@@ -10,14 +10,33 @@ import SwiftUI
 
 struct WorkoutCounterInterfaceView: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var counterVM: WorkoutCounterViewModel
+    @StateObject var counterVM: WorkoutCounterViewModel
 
     var body: some View {
         let wcw = WorkoutCounterView(counterVM: counterVM)
         VStack {
+            Text(counterVM.workout.name)
+                .foregroundStyle(.bluePrimary)
+                .font(.largeTitle)
+                .bold()
+
+            Text("\(counterVM.workout.numSets) sets of \(counterVM.workout.numReps)")
+                .foregroundStyle(.orangePrimary)
+                .font(.title2)
+                .bold()
+
             Spacer()
 
-            wcw.scaledToFit()
+            wcw
+                .scaledToFit()
+                .padding([.trailing, .leading], 10)
+
+            Spacer()
+
+            Text(counterVM.workout.desc ?? "")
+            .multilineTextAlignment(.leading)
+            .font(.headline)
+            .padding([.trailing, .leading], 10)
             Spacer()
 
             HStack {
@@ -58,6 +77,8 @@ struct WorkoutCounterInterfaceView: View {
                 Spacer()
             }
         }
+        .navigationBarBackButtonHidden()
+        .padding(.top, 10)
     }
 }
 
