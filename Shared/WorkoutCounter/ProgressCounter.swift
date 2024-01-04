@@ -62,8 +62,8 @@ struct ProgressCounter_Previews: PreviewProvider {
         @State var value = 3.0
         return ProgressCounter(value: $value,
                                total: 10,
-                               primaryColor: Color("bluePrimaryColor"),
-                               secondaryColor: Color("blueSecondaryColor"),
-                               textColor: Color("orangePrimaryColor"))
+                               primaryColor: .bluePrimary,
+                               secondaryColor: .blueSecondary,
+                               textColor: .orangePrimary)
     }
 }

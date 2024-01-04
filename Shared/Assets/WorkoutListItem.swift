@@ -14,7 +14,7 @@ struct WorkoutListItem: View {
 
     var body: some View {
         RoundedRectangle(cornerRadius: 17, style: .continuous)
-            .fill(Color("blueTertiaryColor"))
+            .fill(.blueTertiary)
             .frame(height: 90)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             .overlay(alignment: .center) {
@@ -22,7 +22,7 @@ struct WorkoutListItem: View {
                     VStack(alignment: .leading) {
                         Button(action: { navigateToDetail = true }) {
                             Image(systemName: "ellipsis.circle.fill")
-                                .foregroundStyle(Color("orangePrimaryColor"), Color("blueSecondaryColor"))
+                                .foregroundStyle(.orangePrimary, .blueSecondary)
                                 .font(.system(size: 24))
                         }
                         .padding(.top, 12)
@@ -39,7 +39,7 @@ struct WorkoutListItem: View {
                     .padding(.leading, 12)
                     Spacer()
                     Image(systemName: "play.circle.fill")
-                        .foregroundStyle(Color("orangePrimaryColor"), Color("blueSecondaryColor"))
+                        .foregroundStyle(.orangePrimary, .blueSecondary)
                         .font(.system(size: 50))
                     .padding(.trailing, 12)
                 }

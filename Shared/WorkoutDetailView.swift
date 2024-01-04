@@ -17,11 +17,11 @@ struct WorkoutDetailView: View {
          ScrollView {
             VStack(alignment: .leading) {
                 Text(workout.name)
-                    .foregroundStyle(Color("bluePrimaryColor"))
+                    .foregroundStyle(.bluePrimary.secondary)
                     .font(onPhone ? .largeTitle : .title3)
                     .bold()
                 Text("\(workout.numSets) sets of \(workout.numReps)\nHold for \(workout.holdTime) seconds")
-                    .foregroundStyle(Color("orangePrimaryColor"))
+                    .foregroundStyle(.orangePrimary)
                     .font(onPhone ? .title2 : .headline)
                     .bold()
                 Text(workout.desc ?? "")

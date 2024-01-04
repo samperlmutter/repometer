@@ -30,7 +30,7 @@ struct WorkoutsView: View {
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 75))
-                        .foregroundStyle(Color("orangePrimaryColor"), Color("bluePrimaryColor"))
+                        .foregroundStyle(.orangePrimary, .bluePrimary)
                 })
                 .sheet(isPresented: $showingCreateSheet, content: {
                     CreateWorkoutView()

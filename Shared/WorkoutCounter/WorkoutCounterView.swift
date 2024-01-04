@@ -50,19 +50,19 @@ struct WorkoutCounterView: View {
             GeometryReader { g in
                 ProgressCounter(value: $counterVM.time,
                                 total: counterVM.countDownType.rawValue,
-                                primaryColor: Color("bluePrimaryColor"),
-                                secondaryColor: Color("blueSecondaryColor"),
-                                textColor: Color("orangePrimaryColor"))
+                                primaryColor: .bluePrimary,
+                                secondaryColor: .blueSecondary,
+                                textColor: .orangePrimary)
                     .overlay {
                         Text(counterVM.countDownType.toString)
                             .font(.system(size: min(g.size.width, g.size.height) * 0.15, weight: .bold))
-                            .foregroundStyle(Color("orangePrimaryColor"))
+                            .foregroundStyle(.orangePrimary)
                             .position(x: g.size.width / 2, y: g.size.height / 4)
 
                         ProgressCounter(value: $counterVM.currentSet,
                                         total: Int(counterVM.workout.numSets),
-                                        primaryColor: Color("orangePrimaryColor"),
-                                        secondaryColor: Color("orangeSecondaryColor"),
+                                        primaryColor: .orangePrimary,
+                                        secondaryColor: .orangeSecondary,
                                         textColor: Color.primary)
                             .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
                             .overlay(alignment: .bottom) {
@@ -75,8 +75,8 @@ struct WorkoutCounterView: View {
 
                         ProgressCounter(value: $counterVM.currentRep,
                                         total: Int(counterVM.workout.numReps),
-                                        primaryColor: Color("orangePrimaryColor"),
-                                        secondaryColor: Color("orangeSecondaryColor"),
+                                        primaryColor: .orangePrimary,
+                                        secondaryColor: .orangeSecondary,
                                         textColor: Color.primary)
                             .frame(width: g.size.width * 0.2, height: g.size.height * 0.2)
                             .overlay(alignment: .bottom) {
