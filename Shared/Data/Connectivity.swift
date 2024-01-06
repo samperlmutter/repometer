@@ -21,17 +21,12 @@ class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             session.activate()
         }
         #if DEBUG
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
-        self.workouts.append(Workout.example())
+        self.workouts.append(Workout.example(true))
+        self.workouts.append(Workout.example(true))
+        self.workouts.append(Workout.example(true))
+        self.workouts.append(Workout.example(true))
+        self.workouts.append(Workout.example(true))
+        self.workouts.append(Workout.example(true))
         #endif
     }
 

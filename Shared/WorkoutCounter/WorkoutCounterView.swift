@@ -114,10 +114,10 @@ struct WorkoutCounterView_Previews: PreviewProvider {
     static var previews: some View {
         #if os(watchOS)
         let workoutManager = WorkoutManager()
-        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example()))
+        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example(false)))
             .environmentObject(workoutManager)
         #else
-        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example()))
+        WorkoutCounterView(counterVM: WorkoutCounterViewModel(Workout.example(false)))
         #endif
     }
 }

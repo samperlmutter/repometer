@@ -48,7 +48,7 @@ struct WorkoutTabView: View {
 struct WorkoutTabView_Previews: PreviewProvider {
     static var previews: some View {
         let workoutManager = WorkoutManager()
-        WorkoutTabView(counterVM: WorkoutCounterViewModel(Workout.example()))
+        WorkoutTabView(counterVM: WorkoutCounterViewModel(Workout.example(false)))
             .environmentObject(workoutManager)
     }
 }

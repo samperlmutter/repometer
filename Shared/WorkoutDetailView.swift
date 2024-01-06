@@ -37,6 +37,6 @@ struct WorkoutDetailView: View {
 
 struct WorkoutDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        return WorkoutDetailView(workout: Workout.example())
+        return WorkoutDetailView(workout: Workout.example(false))
     }
 }

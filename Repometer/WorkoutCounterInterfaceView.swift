@@ -97,6 +97,6 @@ struct WorkoutCounterInterfaceView: View {
 
 struct WorkoutCounterInterfaceView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutCounterInterfaceView(counterVM: WorkoutCounterViewModel(Workout.example()))
+        WorkoutCounterInterfaceView(counterVM: WorkoutCounterViewModel(Workout.example(false)))
     }
 }
