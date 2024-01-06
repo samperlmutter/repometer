@@ -24,19 +24,26 @@ struct WorkoutsView: View {
             }
             .navigationTitle("Workouts")
             .navigationBarTitleDisplayMode(.large)
-            .overlay(alignment: .bottomTrailing) {
-                Button(action: {
-                    showingCreateSheet.toggle()
-                }, label: {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 75))
-                        .foregroundStyle(.orangePrimary, .bluePrimary)
-                })
-                .sheet(isPresented: $showingCreateSheet, content: {
-                    CreateWorkoutView()
-                })
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button {
+                        showingCreateSheet.toggle()
+                    } label: {
+                        HStack {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundStyle(.bluePrimary)
+                            Text("Add Workout")
+                        }
+                        .bold()
+                    }
+
+                    Spacer()
+                }
             }
         }
+        .sheet(isPresented: $showingCreateSheet, content: {
+            CreateWorkoutView()
+        })
     }
 }
 
